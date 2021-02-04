@@ -9,7 +9,7 @@
 #import "LLJTextFieldController.h"
 #import "LLJTextField.h"
 
-@interface LLJTextFieldController ()<UITextFieldDelegate>
+@interface LLJTextFieldController ()<LLJTextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableString *inputString;
 @property (nonatomic, strong) LLJTextField *content;
@@ -91,13 +91,9 @@
     self.titleLabel.text = dateString;
 }
 
-- (void)valueChanged:(LLJTextField *)textField{
-    
-    [textField resetText:textField];
-    
-    NSLog(@"text = %@",textField.inputText);
+- (void)valueChanged:(LLJTextField *)textField {
+    NSLog(@"text = %@, input = %@",textField.text,textField.inputText);
 }
-
 - (LLJTextField *)content{
     if (!_content) {
         _content = [[LLJTextField alloc]initWithFrame:CGRectMake(100, 100, 200, 40)];
@@ -105,9 +101,8 @@
         _content.keyboardType = UIKeyboardTypeDefault;
         _content.returnKeyType = UIReturnKeyDone;
         _content.backgroundColor = [UIColor lightGrayColor];
-        _content.secureTextEntry = YES;
-        _content.delegate = self;
-        [_content addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventEditingChanged];
+        _content.type = LLJInputTextTypeFullSecret;
+        _content.llj_delegate = self;
     }
     return _content;
 }

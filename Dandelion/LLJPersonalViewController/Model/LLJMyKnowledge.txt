@@ -47,4 +47,7 @@
 "禁用`URL Scheme`和`Universal Link`(通用链接)-https://www.jianshu.com/p/d3b7fc82c05b",
 "HTTPS双向认证-https://www.jianshu.com/p/72bf60b5f94d",
 "iOS 获取系统相册图片-https://www.jianshu.com/p/59cb142cc60f?utm_campaign=maleskine",
-"IOS 音频设置-https://www.jianshu.com/p/fb0e5fb71b3c"]
+"IOS 音频设置-https://www.jianshu.com/p/fb0e5fb71b3c",
+"iOS隐私权限获取和检测-https://www.jianshu.com/p/e20fd80619ce?from=jiantop.com",
+"如何使用testFlight向测试人员发布测试包(开发者角度)-https://www.jianshu.com/p/51987e0dc06a?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation",
+"HTTPS双向验证-https://blog.csdn.net/z1591090/article/details/104041998"]

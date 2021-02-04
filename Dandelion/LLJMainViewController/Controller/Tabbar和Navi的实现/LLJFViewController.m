@@ -82,19 +82,17 @@
 }
 
 #pragma mark - 销毁中间详情页控制器 -
-- (void)dismissLastViewController:(UIViewController *)viewController
-{
-    if (viewController.navigationController.viewControllers.count >= 3) {
-        NSMutableArray *array = viewController.navigationController.viewControllers.mutableCopy;
-        NSMutableArray *detaiArray = [NSMutableArray array];
-        for (UIViewController *vc in array) {
-            [detaiArray addObject:vc];
+- (void)removeNavSubControllerByName:(NSString *)vcName {
+    NSMutableArray *mutArr = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+    if (mutArr.count > 2) {
+        for (UIViewController *VC in mutArr) {
+            if ([NSStringFromClass([VC class]) isEqualToString:vcName]) {
+                [mutArr removeObject:VC];
+                break;
+            }
         }
-        if (detaiArray.count > 2) {
-            [array removeObject:detaiArray[detaiArray.count - 2]];
-        }
-        [viewController.navigationController setViewControllers:array animated:NO];
     }
+    self.navigationController.viewControllers = mutArr;
 }
 
 #pragma mark - UINavigationControllerDelegate

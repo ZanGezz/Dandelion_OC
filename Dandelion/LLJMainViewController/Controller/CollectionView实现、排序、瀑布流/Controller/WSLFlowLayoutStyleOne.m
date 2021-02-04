@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title =  [NSString stringWithFormat:@"样式%d",self.flowLayoutStyle];
+    self.title =  [NSString stringWithFormat:@"样式%d",self.flowLayoutStyle];
     self.view.backgroundColor = [UIColor grayColor];
     
     _array = [NSMutableArray array];
@@ -58,6 +58,13 @@
     self.collectionView = collectionView;
     
     [self refreshLayout];
+    
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self removeNavSubControllerByName:@"LLJWaterViewController"];
+
 }
 
 - (void)refreshLayout{

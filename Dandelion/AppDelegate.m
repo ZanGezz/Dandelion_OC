@@ -34,8 +34,20 @@
     self.window.rootViewController = [[LLJTabBarController alloc]init];
     [self.window makeKeyAndVisible];
     
+    //*******听云崩溃日志获取********
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler); //设置异常Log信息的处理
+    
+    //NSArray *array = @[@"2"];
+    //NSString *str = [array objectAtIndex:2];
+    
     return YES;
 }
+
+//*******听云崩溃日志获取********
+void uncaughtExceptionHandler(NSException *exception) {
+    NSLog(@"exception = %@",exception);
+}
+
 
 /*
  *** 从其他app分享公共资源到本app

@@ -17,7 +17,8 @@
 
 //返回按钮
 - (void)createLeftBackBtnWithImageName:(NSString *)imageName backAction:(void (^)(void))backBlock;
-//销毁上一个控制器
-- (void)dismissLastViewController:(UIViewController *)viewController;
+
+//销毁指定控制器
+- (void)removeNavSubControllerByName:(NSString *)vcName;
 
 @end

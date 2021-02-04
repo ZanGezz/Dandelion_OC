@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"瀑布流";
+    self.title = @"瀑布流";
     
     _dataSource = @[@"竖向瀑布流 item等宽不等高 支持头脚视图",@"水平瀑布流 item等高不等宽 不支持头脚视图", @"竖向瀑布流 item等高不等宽 支持头脚视图", @"特为国务院客户端原创栏目滑块样式定制-水平栅格布局  仅供学习交流"];
     _vcArray = @[@"WSLWaterFlowLayoutStyleOne", @"WSLWaterFlowLayoutStyleOne", @"WSLWaterFlowLayoutStyleOne", @"WSLWaterFlowLayoutStyleOne"];

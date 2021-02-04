@@ -72,7 +72,7 @@
 
 #pragma mark - *创建存储model * -
 - (id)createModel:(NSString *)entityName{
-    return [NSEntityDescription  insertNewObjectForEntityForName:entityName  inManagedObjectContext:_context];
+    return [NSEntityDescription insertNewObjectForEntityForName:entityName  inManagedObjectContext:_context];
 }
 
 - (id)getModel:(NSString *)entityName predicate:(NSString *)preString{
