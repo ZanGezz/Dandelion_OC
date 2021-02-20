@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E71B5504288DA7CF1BE75A4 /* libPods-Dandelion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F888294A69BA0CC7EE8174 /* libPods-Dandelion.a */; };
 		4B02F06A244D5F7C00489CF4 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B02F06C244D5F7C00489CF4 /* Language.strings */; };
 		4B0CE4752553D461000E90AE /* LLJCenterControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CE4742553D461000E90AE /* LLJCenterControlView.m */; };
 		4B10B32F23A319A700FB4614 /* LLJAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10B32E23A319A700FB4614 /* LLJAlertViewController.m */; };
@@ -100,6 +99,9 @@
 		4B697F2E25678E4E00F43EE1 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B697F2825678E4E00F43EE1 /* WebViewJavascriptBridge_JS.m */; };
 		4B697F312567BA3F00F43EE1 /* LLJVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B697F302567BA3F00F43EE1 /* LLJVideoController.m */; };
 		4B697F342567BA7C00F43EE1 /* LLJVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B697F332567BA7C00F43EE1 /* LLJVideoPlayController.m */; };
+		4B72587025E108AA00B4F9AC /* LLJQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72586F25E108AA00B4F9AC /* LLJQRCodeController.m */; };
+		4B72587425E10A2E00B4F9AC /* LLJQRScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72587325E10A2E00B4F9AC /* LLJQRScanController.m */; };
+		4B72587825E10A4200B4F9AC /* LLJQRCreateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72587725E10A4200B4F9AC /* LLJQRCreateController.m */; };
 		4B83E1AF25905C8B0041B601 /* git.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B83E1AE25905C8B0041B601 /* git.txt */; };
 		4B83E1DA2595E5E80041B601 /* LLJLunBoTuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E1D92595E5E80041B601 /* LLJLunBoTuController.m */; };
 		4B83E1DD2595E8560041B601 /* IMG_3749.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4B83E1DC2595E8560041B601 /* IMG_3749.JPG */; };
@@ -458,6 +460,12 @@
 		4B697F302567BA3F00F43EE1 /* LLJVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJVideoController.m; sourceTree = "<group>"; };
 		4B697F322567BA7C00F43EE1 /* LLJVideoPlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJVideoPlayController.h; sourceTree = "<group>"; };
 		4B697F332567BA7C00F43EE1 /* LLJVideoPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJVideoPlayController.m; sourceTree = "<group>"; };
+		4B72586E25E108AA00B4F9AC /* LLJQRCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJQRCodeController.h; sourceTree = "<group>"; };
+		4B72586F25E108AA00B4F9AC /* LLJQRCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJQRCodeController.m; sourceTree = "<group>"; };
+		4B72587225E10A2E00B4F9AC /* LLJQRScanController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJQRScanController.h; sourceTree = "<group>"; };
+		4B72587325E10A2E00B4F9AC /* LLJQRScanController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJQRScanController.m; sourceTree = "<group>"; };
+		4B72587625E10A4200B4F9AC /* LLJQRCreateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJQRCreateController.h; sourceTree = "<group>"; };
+		4B72587725E10A4200B4F9AC /* LLJQRCreateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJQRCreateController.m; sourceTree = "<group>"; };
 		4B83E1AE25905C8B0041B601 /* git.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = git.txt; sourceTree = "<group>"; };
 		4B83E1D82595E5E80041B601 /* LLJLunBoTuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJLunBoTuController.h; sourceTree = "<group>"; };
 		4B83E1D92595E5E80041B601 /* LLJLunBoTuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJLunBoTuController.m; sourceTree = "<group>"; };
@@ -760,7 +768,6 @@
 			files = (
 				4B8CDAC7235E8DD400569790 /* CoreData.framework in Frameworks */,
 				4BD3950822DF0181005740F0 /* libmp3lame.a in Frameworks */,
-				2E71B5504288DA7CF1BE75A4 /* libPods-Dandelion.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1449,6 +1456,43 @@
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
+		4B72586A25E1084100B4F9AC /* 二维码生成扫描 */ = {
+			isa = PBXGroup;
+			children = (
+				4B72586D25E1087000B4F9AC /* View */,
+				4B72586C25E1086D00B4F9AC /* Model */,
+				4B72586B25E1086000B4F9AC /* Controller */,
+			);
+			path = "二维码生成扫描";
+			sourceTree = "<group>";
+		};
+		4B72586B25E1086000B4F9AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B72586E25E108AA00B4F9AC /* LLJQRCodeController.h */,
+				4B72586F25E108AA00B4F9AC /* LLJQRCodeController.m */,
+				4B72587225E10A2E00B4F9AC /* LLJQRScanController.h */,
+				4B72587325E10A2E00B4F9AC /* LLJQRScanController.m */,
+				4B72587625E10A4200B4F9AC /* LLJQRCreateController.h */,
+				4B72587725E10A4200B4F9AC /* LLJQRCreateController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B72586C25E1086D00B4F9AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B72586D25E1087000B4F9AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4B83E1E22599B3A00041B601 /* UITableView+addPlaceHolder */ = {
 			isa = PBXGroup;
 			children = (
@@ -1806,6 +1850,7 @@
 		4BD393F622DEFE5B005740F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4B72586A25E1084100B4F9AC /* 二维码生成扫描 */,
 				4B4F7A0C255E769300DE6BF9 /* 手势指纹密码 */,
 				4B1F7C342378F37200568898 /* Tabbar和Navi的实现 */,
 				4BA0E6FF248E172700A401B2 /* 视频录制播放 */,
@@ -2489,6 +2534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BD3954622DF0181005740F0 /* SRBrowseCollectionViewCell.m in Sources */,
+				4B72587425E10A2E00B4F9AC /* LLJQRScanController.m in Sources */,
 				4B4F79C4255E6C1700DE6BF9 /* NSArray+safe.m in Sources */,
 				4B16FDD6258F812D00B8878E /* LLJUIKitHelper.m in Sources */,
 				4BD394E322DF0181005740F0 /* TOCropScrollView.m in Sources */,
@@ -2590,6 +2636,7 @@
 				4B4F79F8255E719300DE6BF9 /* FWBaseReq.m in Sources */,
 				4B437D3F246BE30700B7A0B7 /* FWLangageButton.m in Sources */,
 				4BD3954B22DF0181005740F0 /* EffectView.m in Sources */,
+				4B72587025E108AA00B4F9AC /* LLJQRCodeController.m in Sources */,
 				4B4F79C1255E6C1700DE6BF9 /* NSString+AES128.m in Sources */,
 				4B697F212566457400F43EE1 /* NSURLSessionTask+Helper.m in Sources */,
 				4BD394EC22DF0181005740F0 /* PGDatePicker.m in Sources */,
@@ -2609,6 +2656,7 @@
 				4B697F1B256619A700F43EE1 /* LLJDownLoadCell.m in Sources */,
 				4BD3950522DF0181005740F0 /* JPImageresizerFrameView.m in Sources */,
 				4B9258C42533F62100F23303 /* LLJTextFieldController.m in Sources */,
+				4B72587825E10A4200B4F9AC /* LLJQRCreateController.m in Sources */,
 				4BD394F722DF0181005740F0 /* PGDatePicker+DateHourMinute.m in Sources */,
 				4B1F7C4123794A7A00568898 /* LLJUseOfTableView.m in Sources */,
 				4B18136C237A84F7008E9D77 /* UITableView+AddForPlaceholder.m in Sources */,

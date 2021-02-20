@@ -43,7 +43,7 @@
         make.left.mas_equalTo(self.mas_left);
         make.right.mas_equalTo(self.mas_right);
         make.bottom.mas_equalTo(self.mas_bottom);
-        make.height.mas_equalTo(LLJD_Y(1));
+        make.height.mas_equalTo(LLJD_Y(0.5));
     }];
 }
 

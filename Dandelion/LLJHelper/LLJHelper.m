@@ -675,4 +675,17 @@
     return remove;
 }
 
+/**
+  TODO:退出app
+ */
++ (void)exitApplication {
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [UIView animateWithDuration:0.5f animations:^{
+        window.alpha = 0;
+        window.frame = CGRectMake(0, window.bounds.size.height / 2, window.bounds.size.width, 0.5);
+    } completion:^(BOOL finished) {
+        exit(0);
+    }];
+}
+
 @end
