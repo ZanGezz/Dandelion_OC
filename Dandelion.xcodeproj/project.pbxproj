@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4B02F06A244D5F7C00489CF4 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B02F06C244D5F7C00489CF4 /* Language.strings */; };
 		4B0CE4752553D461000E90AE /* LLJCenterControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CE4742553D461000E90AE /* LLJCenterControlView.m */; };
+		4B10732125E62B80004B0396 /* LLJBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10731925E62B80004B0396 /* LLJBezierViewController.m */; };
+		4B10732225E62B80004B0396 /* LLJCycleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10731C25E62B80004B0396 /* LLJCycleModel.m */; };
+		4B10732325E62B80004B0396 /* LLJCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10732025E62B80004B0396 /* LLJCycleView.m */; };
 		4B10B32F23A319A700FB4614 /* LLJAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10B32E23A319A700FB4614 /* LLJAlertViewController.m */; };
 		4B10B33523A31B5A00FB4614 /* LLJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10B33423A31B5A00FB4614 /* LLJAlertView.m */; };
 		4B1221AE22FBC8CA009C6D64 /* LLJCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B1221AC22FBC8CA009C6D64 /* LLJCoreData.xcdatamodeld */; };
@@ -29,6 +32,7 @@
 		4B1F7C332378F34B00568898 /* LLJDataSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F7C322378F34B00568898 /* LLJDataSaveViewController.m */; };
 		4B1F7C4123794A7A00568898 /* LLJUseOfTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F7C4023794A7A00568898 /* LLJUseOfTableView.m */; };
 		4B1F7C4423794D7900568898 /* LLJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F7C4323794D7900568898 /* LLJTableViewCell.m */; };
+		4B26C5F825EDEA46005B3D74 /* LLJProductListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26C5F725EDEA46005B3D74 /* LLJProductListView.m */; };
 		4B437D21246A6F5100B7A0B7 /* FWSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D1F246A6F5100B7A0B7 /* FWSearchBarView.m */; };
 		4B437D3F246BE30700B7A0B7 /* FWLangageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D3E246BE30700B7A0B7 /* FWLangageButton.m */; };
 		4B437D48246BF64500B7A0B7 /* BWPSaveImgAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D47246BF64500B7A0B7 /* BWPSaveImgAlertView.m */; };
@@ -106,6 +110,7 @@
 		4B83E1DA2595E5E80041B601 /* LLJLunBoTuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E1D92595E5E80041B601 /* LLJLunBoTuController.m */; };
 		4B83E1DD2595E8560041B601 /* IMG_3749.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4B83E1DC2595E8560041B601 /* IMG_3749.JPG */; };
 		4B83E1EE2599B4DF0041B601 /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E1ED2599B4DE0041B601 /* UITableViewCell+Extension.m */; };
+		4B88777C25E7A925005A63C0 /* LLJFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B88777B25E7A925005A63C0 /* LLJFirstLetter.m */; };
 		4B8CDAC7235E8DD400569790 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8CDAC6235E8DD400569790 /* CoreData.framework */; };
 		4B9258C42533F62100F23303 /* LLJTextFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9258C32533F62100F23303 /* LLJTextFieldController.m */; };
 		4B9258CA25353D2B00F23303 /* LLJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9258C925353D2B00F23303 /* LLJTextField.m */; };
@@ -284,6 +289,12 @@
 		4B02F06E244D603100489CF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Language.strings"; sourceTree = "<group>"; };
 		4B0CE4732553D461000E90AE /* LLJCenterControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJCenterControlView.h; sourceTree = "<group>"; };
 		4B0CE4742553D461000E90AE /* LLJCenterControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJCenterControlView.m; sourceTree = "<group>"; };
+		4B10731925E62B80004B0396 /* LLJBezierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLJBezierViewController.m; sourceTree = "<group>"; };
+		4B10731A25E62B80004B0396 /* LLJBezierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLJBezierViewController.h; sourceTree = "<group>"; };
+		4B10731C25E62B80004B0396 /* LLJCycleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLJCycleModel.m; sourceTree = "<group>"; };
+		4B10731D25E62B80004B0396 /* LLJCycleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLJCycleModel.h; sourceTree = "<group>"; };
+		4B10731F25E62B80004B0396 /* LLJCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLJCycleView.h; sourceTree = "<group>"; };
+		4B10732025E62B80004B0396 /* LLJCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLJCycleView.m; sourceTree = "<group>"; };
 		4B10B32D23A319A700FB4614 /* LLJAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJAlertViewController.h; sourceTree = "<group>"; };
 		4B10B32E23A319A700FB4614 /* LLJAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJAlertViewController.m; sourceTree = "<group>"; };
 		4B10B33323A31B5A00FB4614 /* LLJAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJAlertView.h; sourceTree = "<group>"; };
@@ -322,6 +333,8 @@
 		4B1F7C4023794A7A00568898 /* LLJUseOfTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJUseOfTableView.m; sourceTree = "<group>"; };
 		4B1F7C4223794D7900568898 /* LLJTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJTableViewCell.h; sourceTree = "<group>"; };
 		4B1F7C4323794D7900568898 /* LLJTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJTableViewCell.m; sourceTree = "<group>"; };
+		4B26C5F625EDEA46005B3D74 /* LLJProductListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJProductListView.h; sourceTree = "<group>"; };
+		4B26C5F725EDEA46005B3D74 /* LLJProductListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJProductListView.m; sourceTree = "<group>"; };
 		4B3A77702519A15700605A70 /* ios 14 更新兼容问题.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios 14 更新兼容问题.h"; sourceTree = "<group>"; };
 		4B437D1F246A6F5100B7A0B7 /* FWSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWSearchBarView.m; sourceTree = "<group>"; };
 		4B437D20246A6F5100B7A0B7 /* FWSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWSearchBarView.h; sourceTree = "<group>"; };
@@ -473,6 +486,8 @@
 		4B83E1E02595E8DB0041B601 /* Dandelion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dandelion.entitlements; sourceTree = "<group>"; };
 		4B83E1EC2599B4DE0041B601 /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		4B83E1ED2599B4DE0041B601 /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
+		4B88777A25E7A925005A63C0 /* LLJFirstLetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJFirstLetter.h; sourceTree = "<group>"; };
+		4B88777B25E7A925005A63C0 /* LLJFirstLetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJFirstLetter.m; sourceTree = "<group>"; };
 		4B8CDAC6235E8DD400569790 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4B9258C22533F62100F23303 /* LLJTextFieldController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJTextFieldController.h; sourceTree = "<group>"; };
 		4B9258C32533F62100F23303 /* LLJTextFieldController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJTextFieldController.m; sourceTree = "<group>"; };
@@ -794,6 +809,45 @@
 				4B9259322547AE5400F23303 /* LLJBaseVideoPlayer.m */,
 			);
 			path = LLJBaseVideoPlayer;
+			sourceTree = "<group>";
+		};
+		4B10731725E62B80004B0396 /* 贝塞尔曲线及画图 */ = {
+			isa = PBXGroup;
+			children = (
+				4B10731825E62B80004B0396 /* Controller */,
+				4B10731B25E62B80004B0396 /* Model */,
+				4B10731E25E62B80004B0396 /* View */,
+			);
+			path = "贝塞尔曲线及画图";
+			sourceTree = "<group>";
+		};
+		4B10731825E62B80004B0396 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B10731A25E62B80004B0396 /* LLJBezierViewController.h */,
+				4B10731925E62B80004B0396 /* LLJBezierViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4B10731B25E62B80004B0396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B10731D25E62B80004B0396 /* LLJCycleModel.h */,
+				4B10731C25E62B80004B0396 /* LLJCycleModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B10731E25E62B80004B0396 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B10731F25E62B80004B0396 /* LLJCycleView.h */,
+				4B10732025E62B80004B0396 /* LLJCycleView.m */,
+				4B26C5F625EDEA46005B3D74 /* LLJProductListView.h */,
+				4B26C5F725EDEA46005B3D74 /* LLJProductListView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4B10B32923A3105600FB4614 /* 自定义Alert提示框 */ = {
@@ -1348,6 +1402,7 @@
 		4B570B60254A65BF0041E4E5 /* LLJHelper */ = {
 			isa = PBXGroup;
 			children = (
+				4B88777925E7A8EE005A63C0 /* LLJFirstLetter */,
 				4B16FDD3258F812D00B8878E /* LLJUIKitHelper */,
 				4B697F2225678E4E00F43EE1 /* WebViewJavascriptBridge */,
 				4BC2937F25620B4D00310889 /* LLJVideoHelper */,
@@ -1532,6 +1587,15 @@
 				4B83E1ED2599B4DE0041B601 /* UITableViewCell+Extension.m */,
 			);
 			path = "UIView+cell+button";
+			sourceTree = "<group>";
+		};
+		4B88777925E7A8EE005A63C0 /* LLJFirstLetter */ = {
+			isa = PBXGroup;
+			children = (
+				4B88777A25E7A925005A63C0 /* LLJFirstLetter.h */,
+				4B88777B25E7A925005A63C0 /* LLJFirstLetter.m */,
+			);
+			path = LLJFirstLetter;
 			sourceTree = "<group>";
 		};
 		4B9258B22533F59700F23303 /* 自定义密码输入框 */ = {
@@ -1850,6 +1914,7 @@
 		4BD393F622DEFE5B005740F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4B10731725E62B80004B0396 /* 贝塞尔曲线及画图 */,
 				4B72586A25E1084100B4F9AC /* 二维码生成扫描 */,
 				4B4F7A0C255E769300DE6BF9 /* 手势指纹密码 */,
 				4B1F7C342378F37200568898 /* Tabbar和Navi的实现 */,
@@ -2561,6 +2626,7 @@
 				4B9259172546B8E800F23303 /* LLJControlView.m in Sources */,
 				4BD3940222DEFEA4005740F0 /* LLJPersonalController.m in Sources */,
 				4BD394F222DF0181005740F0 /* PGDatePickManager.m in Sources */,
+				4B26C5F825EDEA46005B3D74 /* LLJProductListView.m in Sources */,
 				4BD3953A22DF0181005740F0 /* SRAlbumGroupViewController.m in Sources */,
 				4B92591D2546B95400F23303 /* LLJBottomControlView.m in Sources */,
 				4BD394EF22DF0181005740F0 /* PGDatePicker+MonthDayHour.m in Sources */,
@@ -2598,6 +2664,7 @@
 				4BD393FF22DEFE87005740F0 /* LLJMainViewController.m in Sources */,
 				4BD393E722DEC5C6005740F0 /* UIColor+Util.m in Sources */,
 				4B4F79412559387800DE6BF9 /* LLJViewRotateManage.m in Sources */,
+				4B10732325E62B80004B0396 /* LLJCycleView.m in Sources */,
 				4B92591A2546B93A00F23303 /* LLJTopControlView.m in Sources */,
 				4B4F7995255E649700DE6BF9 /* FWUserDefultHelper.m in Sources */,
 				4B4F7A28255EBEE100DE6BF9 /* SDCollectionViewCell.m in Sources */,
@@ -2650,6 +2717,7 @@
 				4BD394F922DF0181005740F0 /* PGDatePicker+DateHour.m in Sources */,
 				4B0CE4752553D461000E90AE /* LLJCenterControlView.m in Sources */,
 				4B697F172564FA5A00F43EE1 /* LLJDownLoadModel.m in Sources */,
+				4B10732225E62B80004B0396 /* LLJCycleModel.m in Sources */,
 				4B4F79B2255E6B1C00DE6BF9 /* FWAlertView.m in Sources */,
 				4B4B248625A4106800F29BDB /* LLJImagePickerHelper.m in Sources */,
 				4BC2938225620B7200310889 /* LLJVideoHelper.m in Sources */,
@@ -2680,6 +2748,7 @@
 				4BD394F422DF0181005740F0 /* NSBundle+PGDatePicker.m in Sources */,
 				4BD394F622DF0181005740F0 /* PGDatePicker+MonthDayHourMinuteSecond.m in Sources */,
 				4BD3954C22DF0181005740F0 /* ImageCollectionViewCell.m in Sources */,
+				4B88777C25E7A925005A63C0 /* LLJFirstLetter.m in Sources */,
 				4BD394FD22DF0181005740F0 /* PGDatePicker+Common.m in Sources */,
 				4BD394E622DF0181005740F0 /* TOCropOverlayView.m in Sources */,
 				4BD3953622DF0181005740F0 /* SREidtViewController.m in Sources */,
@@ -2691,6 +2760,7 @@
 				4BD3954F22DF0181005740F0 /* UICollectionView+Info.m in Sources */,
 				4BD3954E22DF0181005740F0 /* PHAssetCollection+Info.m in Sources */,
 				4B4B248725A4106800F29BDB /* LLJLimitImagePickerController.m in Sources */,
+				4B10732125E62B80004B0396 /* LLJBezierViewController.m in Sources */,
 				4B4B248525A4106800F29BDB /* LLJImagePickerCell.m in Sources */,
 				4B122E442303D4910085F5DF /* BWPSourceSelectView.m in Sources */,
 				4B122E452303D4910085F5DF /* HXShareScrollView.m in Sources */,
