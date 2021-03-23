@@ -125,7 +125,6 @@ static NSInteger num = 3;
     return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     return LLJD_Y(80);
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -134,10 +133,17 @@ static NSInteger num = 3;
         mainCell = [[LLJMainCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MainCell"];
         mainCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    mainCell.tipsContent = @"kkk";
     [mainCell setTitleName:self.dataSource[indexPath.row]];
     return mainCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LLJMainCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.showTipsView = !cell.showTipsView;
+    cell.tipsContent = @"kkk";
+    [tableView reloadData];
+    return;
     NSString *viewController = [[(NSString *)self.dataSource[indexPath.row] componentsSeparatedByString:@":"] lastObject];
     Class class = NSClassFromString(viewController);
     LLJFViewController *instance = [[class alloc]init];

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LLJCycleView : UIView
 
+//圆环圆心Label Text
+@property (nonatomic, copy) NSString *text;
 //圆环圆心位置
 @property (nonatomic) CGPoint cycleCenterPoint;
 

@@ -7,14 +7,12 @@
 //
 
 #import "LLJBezierViewController.h"
-#import "LLJCycleView.h"
 #import "LLJCycleModel.h"
-#import "LLJProductListView.h"
+#import "ZBAssetAllocationView.h"
 
 @interface LLJBezierViewController ()
 
-@property (nonatomic, strong) LLJCycleView *cycle;
-@property (nonatomic, strong) LLJProductListView *productListView;
+@property (nonatomic, strong) ZBAssetAllocationView *assetView;
 @property (nonatomic, strong) NSArray *array;
 @end
 
@@ -27,9 +25,7 @@
 }
 
 - (void)reloadDataSource {
-    [self.productListView reloadData:self.array];
-    [self.cycle strokeWithSource:self.array];
-
+    [self.assetView reloadData:self.array];
 }
 - (void)setUpUI {
     
@@ -44,7 +40,8 @@
     
     //假数据
     NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < 17; i ++) {
+    NSInteger count = 10;
+    for (int i = 0; i < count; i ++) {
         LLJCycleModel *model = [[LLJCycleModel alloc]init];
         model.totalProperty = 100.0;
 
@@ -68,38 +65,27 @@
             model.productProperty = 10.0;
             model.strokeColor     = [UIColor greenColor];
         } else if (i == 6) {
-            model.productProperty = 39.199;
+            model.productProperty = 9.199;
             model.strokeColor     = [UIColor purpleColor];
+        } else {
+            double property = 30/(count-7);
+            model.productProperty = property;
+            model.strokeColor     = [UIColor brownColor];
+            if (i == count - 1) {
+                model.productProperty = 30 - property*(count - 8);
+            }
         }
         model.productName     = @"定期";
         [array addObject:model];
     }
     
-    LLJCycleView *cycle = [[LLJCycleView alloc]initWithFrame:CGRectMake(0, 0, 180, 180)];
-    cycle.strokeWithAnimation = YES;
-    [self.view addSubview:cycle];
-    [cycle mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.view.mas_left).offset(50);
-        make.top.mas_equalTo(self.view.mas_top).offset(100);
-        make.width.mas_equalTo(180);
-        make.height.mas_equalTo(180);
-    }];
-    
-
     self.array = array;
-    self.cycle = cycle;
     
-    self.productListView = [[LLJProductListView alloc]init];
-    [self.view addSubview:self.productListView];
-    [self.productListView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(cycle.mas_right).offset(80);
-        make.width.mas_equalTo(80);
-        make.top.mas_equalTo(cycle.mas_top).offset(-10);
-        make.bottom.mas_equalTo(cycle.mas_bottom).offset(10);
-    }];
-    
-    [cycle strokeWithSource:array];
-    [self.productListView reloadData:array];
+    ZBAssetAllocationView *assetView = [[ZBAssetAllocationView alloc]initWithFrame:CGRectMake(0, 300, SCREEN_WIDTH, 160)];
+    [self.view addSubview:assetView];
+    assetView.cycleViewOffsetX = 20;
+    [assetView reloadData:array];
+    self.assetView = assetView;
 }
 
 @end

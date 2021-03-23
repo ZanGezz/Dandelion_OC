@@ -17,6 +17,8 @@
 @property (nonatomic) UIView *cycleView;
 //画图layer
 @property (nonatomic) CAShapeLayer *cycleLayer;
+//nameLabel
+@property (nonatomic, strong) UILabel *nameLabel;
 
 @end
 
@@ -107,6 +109,12 @@
     [_cycleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self);
     }];
+    [_cycleView addSubview:self.nameLabel];
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.cycleView.mas_centerX);
+        make.centerY.mas_equalTo(self.cycleView.mas_centerY);
+        make.width.mas_equalTo(self.cycleRadius*2 - self.lineWidth - 8);
+    }];
     //添加画图layer
     _cycleLayer = [CAShapeLayer layer];
     [_cycleView.layer addSublayer:_cycleLayer];
@@ -123,6 +131,7 @@
         //设置结束角度
         startRadio = endRadio;
     }];
+    
     //是否开启动画
     if (self.strokeWithAnimation) {
         [self drawWithAnimation];
@@ -157,4 +166,19 @@
     [maskLayer addAnimation:animation forKey:@"circleAnimation"];
 }
 
+- (void)setText:(NSString *)text {
+    _text = text;
+    _nameLabel.text = text;
+}
+- (UILabel *)nameLabel {
+    if (!_nameLabel) {
+        _nameLabel = [[UILabel alloc]init];
+        _nameLabel.textColor = [UIColor lightGrayColor];
+        _nameLabel.font = LLJFont(14);
+        _nameLabel.numberOfLines = 0;
+        _nameLabel.textAlignment = NSTextAlignmentCenter;
+        _nameLabel.text = @"资产分布分布分布";
+    }
+    return _nameLabel;
+}
 @end

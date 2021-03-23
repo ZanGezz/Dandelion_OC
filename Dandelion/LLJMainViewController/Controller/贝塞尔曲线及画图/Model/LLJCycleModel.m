@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         _minRatio = 0.001;
+        _strokeColor = [UIColor lightGrayColor];
     }
     return self;
 }

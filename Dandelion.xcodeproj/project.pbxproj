@@ -33,6 +33,9 @@
 		4B1F7C4123794A7A00568898 /* LLJUseOfTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F7C4023794A7A00568898 /* LLJUseOfTableView.m */; };
 		4B1F7C4423794D7900568898 /* LLJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F7C4323794D7900568898 /* LLJTableViewCell.m */; };
 		4B26C5F825EDEA46005B3D74 /* LLJProductListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26C5F725EDEA46005B3D74 /* LLJProductListView.m */; };
+		4B2D7EAB26089A3200CD4D1D /* ZBAssetAllocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2D7EAA26089A3200CD4D1D /* ZBAssetAllocationView.m */; };
+		4B2D7EBA2609C38900CD4D1D /* UITableViewCell+TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2D7EB82609C38900CD4D1D /* UITableViewCell+TipsView.m */; };
+		4B2D7EBF2609C6CC00CD4D1D /* UITableView+AddTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2D7EBD2609C6CC00CD4D1D /* UITableView+AddTipsView.m */; };
 		4B437D21246A6F5100B7A0B7 /* FWSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D1F246A6F5100B7A0B7 /* FWSearchBarView.m */; };
 		4B437D3F246BE30700B7A0B7 /* FWLangageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D3E246BE30700B7A0B7 /* FWLangageButton.m */; };
 		4B437D48246BF64500B7A0B7 /* BWPSaveImgAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D47246BF64500B7A0B7 /* BWPSaveImgAlertView.m */; };
@@ -335,6 +338,12 @@
 		4B1F7C4323794D7900568898 /* LLJTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJTableViewCell.m; sourceTree = "<group>"; };
 		4B26C5F625EDEA46005B3D74 /* LLJProductListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJProductListView.h; sourceTree = "<group>"; };
 		4B26C5F725EDEA46005B3D74 /* LLJProductListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJProductListView.m; sourceTree = "<group>"; };
+		4B2D7EA926089A3200CD4D1D /* ZBAssetAllocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBAssetAllocationView.h; sourceTree = "<group>"; };
+		4B2D7EAA26089A3200CD4D1D /* ZBAssetAllocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBAssetAllocationView.m; sourceTree = "<group>"; };
+		4B2D7EB82609C38900CD4D1D /* UITableViewCell+TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TipsView.m"; sourceTree = "<group>"; };
+		4B2D7EB92609C38900CD4D1D /* UITableViewCell+TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+TipsView.h"; sourceTree = "<group>"; };
+		4B2D7EBD2609C6CC00CD4D1D /* UITableView+AddTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AddTipsView.m"; sourceTree = "<group>"; };
+		4B2D7EBE2609C6CC00CD4D1D /* UITableView+AddTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AddTipsView.h"; sourceTree = "<group>"; };
 		4B3A77702519A15700605A70 /* ios 14 更新兼容问题.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios 14 更新兼容问题.h"; sourceTree = "<group>"; };
 		4B437D1F246A6F5100B7A0B7 /* FWSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWSearchBarView.m; sourceTree = "<group>"; };
 		4B437D20246A6F5100B7A0B7 /* FWSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWSearchBarView.h; sourceTree = "<group>"; };
@@ -846,6 +855,8 @@
 				4B10732025E62B80004B0396 /* LLJCycleView.m */,
 				4B26C5F625EDEA46005B3D74 /* LLJProductListView.h */,
 				4B26C5F725EDEA46005B3D74 /* LLJProductListView.m */,
+				4B2D7EA926089A3200CD4D1D /* ZBAssetAllocationView.h */,
+				4B2D7EAA26089A3200CD4D1D /* ZBAssetAllocationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1091,6 +1102,17 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4B2D7EB72609C38900CD4D1D /* UITableViewCell+TipsView */ = {
+			isa = PBXGroup;
+			children = (
+				4B2D7EBE2609C6CC00CD4D1D /* UITableView+AddTipsView.h */,
+				4B2D7EBD2609C6CC00CD4D1D /* UITableView+AddTipsView.m */,
+				4B2D7EB92609C38900CD4D1D /* UITableViewCell+TipsView.h */,
+				4B2D7EB82609C38900CD4D1D /* UITableViewCell+TipsView.m */,
+			);
+			path = "UITableViewCell+TipsView";
 			sourceTree = "<group>";
 		};
 		4B437D1E246A6F5100B7A0B7 /* SearchBar */ = {
@@ -1880,6 +1902,7 @@
 		4BD393C222DEC5C6005740F0 /* 分类和父类 */ = {
 			isa = PBXGroup;
 			children = (
+				4B2D7EB72609C38900CD4D1D /* UITableViewCell+TipsView */,
 				4B83E1E62599B4300041B601 /* UIView+cell+button */,
 				4B83E1E42599B3DC0041B601 /* NSArray+safe+base64+AES */,
 				4B83E1E22599B3A00041B601 /* UITableView+addPlaceHolder */,
@@ -2690,6 +2713,7 @@
 				4B4F7A29255EBEE100DE6BF9 /* TADotView.m in Sources */,
 				4BD3950622DF0181005740F0 /* JPImageresizerConfigure.m in Sources */,
 				4BD3950C22DF0181005740F0 /* UIAlertTagAction.m in Sources */,
+				4B2D7EBF2609C6CC00CD4D1D /* UITableView+AddTipsView.m in Sources */,
 				4B83E1DA2595E5E80041B601 /* LLJLunBoTuController.m in Sources */,
 				4B4F799D255E649700DE6BF9 /* WKUserContentController+IMYHookAjax.m in Sources */,
 				4BD3950222DF0181005740F0 /* PAMZTimerLabel.m in Sources */,
@@ -2753,6 +2777,7 @@
 				4BD394E622DF0181005740F0 /* TOCropOverlayView.m in Sources */,
 				4BD3953622DF0181005740F0 /* SREidtViewController.m in Sources */,
 				4BD394F122DF0181005740F0 /* PGDatePicker+Time.m in Sources */,
+				4B2D7EAB26089A3200CD4D1D /* ZBAssetAllocationView.m in Sources */,
 				4BD394E922DF0181005740F0 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				4BD3950122DF0181005740F0 /* PGDatePicker+DateHourMinuteSecond.m in Sources */,
 				4B9258D52539936900F23303 /* LLJRecordTool.m in Sources */,
@@ -2788,6 +2813,7 @@
 				4B4F7A27255EBEE100DE6BF9 /* UIView+SDExtension.m in Sources */,
 				4BD3956522DF059C005740F0 /* MBProgressHUD.m in Sources */,
 				4BD394E422DF0181005740F0 /* TOCropViewController.m in Sources */,
+				4B2D7EBA2609C38900CD4D1D /* UITableViewCell+TipsView.m in Sources */,
 				4B4F79F7255E719300DE6BF9 /* LLJNetManager.m in Sources */,
 				4BD3954A22DF0181005740F0 /* SRCameraButton.m in Sources */,
 				4BD394FF22DF0181005740F0 /* PGDatePickManagerHeaderView.m in Sources */,
@@ -2948,7 +2974,7 @@
 				CODE_SIGN_ENTITLEMENTS = Dandelion/Dandelion.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X44CE4T999;
+				DEVELOPMENT_TEAM = 474CB9MP8W;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dandelion/Common/LLJDandelion.pch";
 				INFOPLIST_FILE = Dandelion/Info.plist;
@@ -2961,7 +2987,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dandelion/UTils/BWPAlbum/SRAlbumClass/SRModel/lame",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-197692674-qq.com";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zgcbank.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2975,7 +3001,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Dandelion/Dandelion.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X44CE4T999;
+				DEVELOPMENT_TEAM = 474CB9MP8W;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dandelion/Common/LLJDandelion.pch";
 				INFOPLIST_FILE = Dandelion/Info.plist;
@@ -2988,7 +3014,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dandelion/UTils/BWPAlbum/SRAlbumClass/SRModel/lame",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-197692674-qq.com";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zgcbank.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

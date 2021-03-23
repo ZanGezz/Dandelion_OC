@@ -30,6 +30,7 @@
 #import "LLJNetManager.h"
 #import <MJRefresh/MJRefresh.h>
 #import "UIView+HiddenFrame.h"
-//#import "UITableViewCell+Extension.h"
+#import "UITableViewCell+TipsView.h"
+#import "UITableView+AddTipsView.h"
 
 #endif /* LLJDandelion_pch */
