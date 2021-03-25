@@ -12,8 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableViewCell (TipsView)
 
-@property (nonatomic) BOOL showTipsView;           //是否显示tipsview
 @property (nonatomic, copy) NSString *tipsContent; //tips显示内容
+@property (nonatomic) CGFloat rowHeight;           //tips显示内容
+@property (nonatomic) CGFloat selectRowHeight;           //tips显示内容
+@property (nonatomic) CGFloat unselectRowHeight;           //tips显示内容
 
 @end
 

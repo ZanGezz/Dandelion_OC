@@ -35,7 +35,6 @@
 		4B26C5F825EDEA46005B3D74 /* LLJProductListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26C5F725EDEA46005B3D74 /* LLJProductListView.m */; };
 		4B2D7EAB26089A3200CD4D1D /* ZBAssetAllocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2D7EAA26089A3200CD4D1D /* ZBAssetAllocationView.m */; };
 		4B2D7EBA2609C38900CD4D1D /* UITableViewCell+TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2D7EB82609C38900CD4D1D /* UITableViewCell+TipsView.m */; };
-		4B2D7EBF2609C6CC00CD4D1D /* UITableView+AddTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2D7EBD2609C6CC00CD4D1D /* UITableView+AddTipsView.m */; };
 		4B437D21246A6F5100B7A0B7 /* FWSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D1F246A6F5100B7A0B7 /* FWSearchBarView.m */; };
 		4B437D3F246BE30700B7A0B7 /* FWLangageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D3E246BE30700B7A0B7 /* FWLangageButton.m */; };
 		4B437D48246BF64500B7A0B7 /* BWPSaveImgAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B437D47246BF64500B7A0B7 /* BWPSaveImgAlertView.m */; };
@@ -283,6 +282,7 @@
 		4BDACCB222E008B60011066D /* LLJSourceMain.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BDACCB122E008B60011066D /* LLJSourceMain.txt */; };
 		4BDACCBC22E00A4D0011066D /* LLJCircleOfFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDACCB822E00A4D0011066D /* LLJCircleOfFriendController.m */; };
 		4BDACCBF22E059F30011066D /* LLJMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDACCBE22E059F30011066D /* LLJMainCell.m */; };
+		4BF8A2D3260C8748007FD071 /* UITableView+AddTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8A2D1260C8748007FD071 /* UITableView+AddTipsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -342,8 +342,6 @@
 		4B2D7EAA26089A3200CD4D1D /* ZBAssetAllocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBAssetAllocationView.m; sourceTree = "<group>"; };
 		4B2D7EB82609C38900CD4D1D /* UITableViewCell+TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TipsView.m"; sourceTree = "<group>"; };
 		4B2D7EB92609C38900CD4D1D /* UITableViewCell+TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+TipsView.h"; sourceTree = "<group>"; };
-		4B2D7EBD2609C6CC00CD4D1D /* UITableView+AddTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AddTipsView.m"; sourceTree = "<group>"; };
-		4B2D7EBE2609C6CC00CD4D1D /* UITableView+AddTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AddTipsView.h"; sourceTree = "<group>"; };
 		4B3A77702519A15700605A70 /* ios 14 更新兼容问题.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios 14 更新兼容问题.h"; sourceTree = "<group>"; };
 		4B437D1F246A6F5100B7A0B7 /* FWSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWSearchBarView.m; sourceTree = "<group>"; };
 		4B437D20246A6F5100B7A0B7 /* FWSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWSearchBarView.h; sourceTree = "<group>"; };
@@ -781,6 +779,8 @@
 		4BDACCBD22E059F30011066D /* LLJMainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJMainCell.h; sourceTree = "<group>"; };
 		4BDACCBE22E059F30011066D /* LLJMainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJMainCell.m; sourceTree = "<group>"; };
 		4BEA190222E7FED50068D734 /* LLJSingleInstence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJSingleInstence.h; sourceTree = "<group>"; };
+		4BF8A2D1260C8748007FD071 /* UITableView+AddTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AddTipsView.m"; sourceTree = "<group>"; };
+		4BF8A2D2260C8748007FD071 /* UITableView+AddTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AddTipsView.h"; sourceTree = "<group>"; };
 		95F888294A69BA0CC7EE8174 /* libPods-Dandelion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dandelion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0CC978E807BF0D55564A94 /* Pods-Dandelion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dandelion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dandelion/Pods-Dandelion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1107,8 +1107,8 @@
 		4B2D7EB72609C38900CD4D1D /* UITableViewCell+TipsView */ = {
 			isa = PBXGroup;
 			children = (
-				4B2D7EBE2609C6CC00CD4D1D /* UITableView+AddTipsView.h */,
-				4B2D7EBD2609C6CC00CD4D1D /* UITableView+AddTipsView.m */,
+				4BF8A2D2260C8748007FD071 /* UITableView+AddTipsView.h */,
+				4BF8A2D1260C8748007FD071 /* UITableView+AddTipsView.m */,
 				4B2D7EB92609C38900CD4D1D /* UITableViewCell+TipsView.h */,
 				4B2D7EB82609C38900CD4D1D /* UITableViewCell+TipsView.m */,
 			);
@@ -2713,7 +2713,7 @@
 				4B4F7A29255EBEE100DE6BF9 /* TADotView.m in Sources */,
 				4BD3950622DF0181005740F0 /* JPImageresizerConfigure.m in Sources */,
 				4BD3950C22DF0181005740F0 /* UIAlertTagAction.m in Sources */,
-				4B2D7EBF2609C6CC00CD4D1D /* UITableView+AddTipsView.m in Sources */,
+				4BF8A2D3260C8748007FD071 /* UITableView+AddTipsView.m in Sources */,
 				4B83E1DA2595E5E80041B601 /* LLJLunBoTuController.m in Sources */,
 				4B4F799D255E649700DE6BF9 /* WKUserContentController+IMYHookAjax.m in Sources */,
 				4BD3950222DF0181005740F0 /* PAMZTimerLabel.m in Sources */,

@@ -54,4 +54,5 @@
 "HTTPS双向验证证书生成-https://www.jianshu.com/p/0a983fa56555?utm_campaign=maleskine",
 "HTTPS双向验证-https://mp.weixin.qq.com/s/UiGEzXoCn3F66NRz_T9crA",
 "TableViewCell.Section切圆角-https://www.jianshu.com/p/739408a7aae1?utm_campaign=hugo",
-"贝塞尔曲线使用-https://www.jianshu.com/p/6c9aa9c5dd68"]
+"贝塞尔曲线使用-https://www.jianshu.com/p/6c9aa9c5dd68",
+"动画篇-https://www.jianshu.com/p/79a0b3c7086c"]

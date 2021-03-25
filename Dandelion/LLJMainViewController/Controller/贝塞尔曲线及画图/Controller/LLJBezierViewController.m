@@ -35,7 +35,6 @@
     button.frame = CGRectMake(200, 500, 100, 40);
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.view addSubview:button];
-    
     self.view.backgroundColor = LLJWhiteColor;
     
     //假数据

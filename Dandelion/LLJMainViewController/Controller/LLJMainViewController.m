@@ -24,7 +24,7 @@ static NSInteger num = 3;
 
 //@property(nonatomic,strong)UIPickerView *pickerView;
 @property (nonatomic, strong) LLJFTableView *mytableView;
-@property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic) CGFloat naviAlpha;
 
 @property (nonatomic, strong) UILabel *label;
@@ -110,7 +110,7 @@ static NSInteger num = 3;
     
     self.view.backgroundColor = LLJColor(241, 241, 241, 1);
     //获取本地数据
-    self.dataSource = [self getLocalResource:@"LLJSourceMain.txt"];
+    self.dataArray = [self getLocalResource:@"LLJSourceMain.txt"];
 
     [self.view addSubview:self.mytableView];
     
@@ -122,7 +122,7 @@ static NSInteger num = 3;
 #pragma mark - UITableViewDelegate -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.dataSource.count;
+    return self.dataArray.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return LLJD_Y(80);
@@ -133,21 +133,19 @@ static NSInteger num = 3;
         mainCell = [[LLJMainCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MainCell"];
         mainCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    mainCell.tipsContent = @"kkk";
-    [mainCell setTitleName:self.dataSource[indexPath.row]];
+    [mainCell setTitleName:self.dataArray[indexPath.row]];
     return mainCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     LLJMainCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.showTipsView = !cell.showTipsView;
-    cell.tipsContent = @"kkk";
+    cell.tipsContent = @"错了，错了，大错特错，笨啊！！！";
     [tableView reloadData];
     return;
-    NSString *viewController = [[(NSString *)self.dataSource[indexPath.row] componentsSeparatedByString:@":"] lastObject];
+    NSString *viewController = [[(NSString *)self.dataArray[indexPath.row] componentsSeparatedByString:@":"] lastObject];
     Class class = NSClassFromString(viewController);
     LLJFViewController *instance = [[class alloc]init];
-    instance.titleName = self.dataSource[indexPath.row];
+    instance.titleName = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:instance animated:YES];
 }
 

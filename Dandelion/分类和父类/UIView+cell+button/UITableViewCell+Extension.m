@@ -11,7 +11,8 @@
 @implementation UITableViewCell (Extension)
 
 + (void)load {
-    //swizzleMethod([self class], @selector(addSubview:), @selector(runtime_addSubview:));
+    //交换添加子视图
+    swizzleMethod([self class], @selector(addSubview:), @selector(runtime_addSubview:));
 }
 
 void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)
