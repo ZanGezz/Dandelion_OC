@@ -283,6 +283,7 @@
 		4BDACCBC22E00A4D0011066D /* LLJCircleOfFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDACCB822E00A4D0011066D /* LLJCircleOfFriendController.m */; };
 		4BDACCBF22E059F30011066D /* LLJMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDACCBE22E059F30011066D /* LLJMainCell.m */; };
 		4BF8A2D3260C8748007FD071 /* UITableView+AddTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8A2D1260C8748007FD071 /* UITableView+AddTipsView.m */; };
+		4BF8A2D6260DC69A007FD071 /* update.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8A2D5260DC699007FD071 /* update.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -781,6 +782,7 @@
 		4BEA190222E7FED50068D734 /* LLJSingleInstence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJSingleInstence.h; sourceTree = "<group>"; };
 		4BF8A2D1260C8748007FD071 /* UITableView+AddTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AddTipsView.m"; sourceTree = "<group>"; };
 		4BF8A2D2260C8748007FD071 /* UITableView+AddTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AddTipsView.h"; sourceTree = "<group>"; };
+		4BF8A2D5260DC699007FD071 /* update.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = update.js; sourceTree = "<group>"; };
 		95F888294A69BA0CC7EE8174 /* libPods-Dandelion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dandelion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0CC978E807BF0D55564A94 /* Pods-Dandelion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dandelion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dandelion/Pods-Dandelion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1048,6 +1050,7 @@
 		4B1F7C302378F30900568898 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4BF8A2D5260DC699007FD071 /* update.js */,
 				4B1F7C312378F34B00568898 /* LLJDataSaveViewController.h */,
 				4B1F7C322378F34B00568898 /* LLJDataSaveViewController.m */,
 			);
@@ -2511,6 +2514,7 @@
 				4BD3951722DF0181005740F0 /* sr_tailoring_icon@2x.png in Resources */,
 				4BD3954022DF0181005740F0 /* SRAlbumGroupViewController.xib in Resources */,
 				4BD3951922DF0181005740F0 /* SRAlbum_selected@2x.png in Resources */,
+				4BF8A2D6260DC69A007FD071 /* update.js in Resources */,
 				4BD3953322DF0181005740F0 /* SREidtViewController.xib in Resources */,
 				4BD3952422DF0181005740F0 /* SRAlbum_Play@2x.png in Resources */,
 				4BD3955922DF0181005740F0 /* SR_Camera_Selected@2x.png in Resources */,

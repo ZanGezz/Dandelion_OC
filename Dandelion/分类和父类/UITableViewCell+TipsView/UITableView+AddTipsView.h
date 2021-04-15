@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITableView (AddTipsView)<UITableViewDelegate>
+@interface UITableView (AddTipsView)
+
+- (void)swizzlMethod:(UIViewController *)viewController;
 
 @end
 

@@ -4,7 +4,8 @@
 //
 //  Created by 刘帅 on 2019/7/17.
 //  Copyright © 2019 liushuai. All rights reserved.
-//
+
+//  ~/Library/Group Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Assets/TemporaryItems/MobileApps 找到.ipa
 
 #import "AppDelegate.h"
 #import "LLJTabBarController.h"

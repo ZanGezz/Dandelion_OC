@@ -138,10 +138,6 @@ static NSInteger num = 3;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    LLJMainCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.tipsContent = @"错了，错了，大错特错，笨啊！！！";
-    [tableView reloadData];
-    return;
     NSString *viewController = [[(NSString *)self.dataArray[indexPath.row] componentsSeparatedByString:@":"] lastObject];
     Class class = NSClassFromString(viewController);
     LLJFViewController *instance = [[class alloc]init];
@@ -158,6 +154,7 @@ static NSInteger num = 3;
         _mytableView.delegate = self;
         _mytableView.dataSource = self;
         _mytableView.backgroundColor = LLJColor(241, 241, 241, 1);
+        //[_mytableView swizzlMethod:self];
     }
     return _mytableView;
 }

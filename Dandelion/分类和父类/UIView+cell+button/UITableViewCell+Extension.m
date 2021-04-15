@@ -38,6 +38,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)
     // 还需要注意 屏蔽掉一些系统直接添加在Cell上的控件，如 UITableViewCellEditControl、UITableViewCellReorderControl
     if ([view isKindOfClass:NSClassFromString(@"UITableViewCellContentView")] || [view isKindOfClass:NSClassFromString(@"UITableViewCellEditControl")] || [view isKindOfClass:NSClassFromString(@"UITableViewCellReorderControl")]) {
         [self runtime_addSubview:view];
+        NSLog(@"UITableViewCell+Extension.h");
     } else {
         [self.contentView addSubview:view];
     }
