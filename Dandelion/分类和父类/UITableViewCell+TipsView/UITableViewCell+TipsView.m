@@ -52,4 +52,38 @@
     return self.frame.size.height;
 }
 
++ (void)load {
+    //交换添加子视图
+    //swizzleMethods([self class], @selector(addSubview:), @selector(runtimes_addSubview:));
+}
+
+void swizzleMethods(Class class, SEL originalSelector, SEL swizzledSelector)
+{
+    // the method might not exist in the class, but in its superclass
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+    
+    // class_addMethod will fail if original method already exists
+    BOOL didAddMethod = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    
+    // the method doesn’t exist and we just added one
+    if (didAddMethod) {
+        class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
+
+- (void)runtimes_addSubview:(UIView *)view {
+    
+    // 判断不让 UITableViewCellContentView addSubView自己
+    // 还需要注意 屏蔽掉一些系统直接添加在Cell上的控件，如 UITableViewCellEditControl、UITableViewCellReorderControl
+    if ([view isKindOfClass:NSClassFromString(@"UITableViewCellContentView")] || [view isKindOfClass:NSClassFromString(@"UITableViewCellEditControl")] || [view isKindOfClass:NSClassFromString(@"UITableViewCellReorderControl")]) {
+        [self runtimes_addSubview:view];
+        NSLog(@"UITableViewCell+TipsView.h");
+    } else {
+        [self.contentView addSubview:view];
+    }
+}
+
 @end

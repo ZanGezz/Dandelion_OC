@@ -11,10 +11,10 @@
 @implementation UITableView (AddTipsView)
 
 
-void addTipsSwizzMethod(Class class, SEL oriSel, SEL newSel) {
+void addTipsSwizzMethod(Class class, Class newClass, SEL oriSel, SEL newSel) {
     
     Method oriMethod = class_getInstanceMethod(class, oriSel);
-    Method newMethod = class_getInstanceMethod([UITableView class], newSel);
+    Method newMethod = class_getInstanceMethod(newClass, newSel);
     
     BOOL success = class_addMethod(class, oriSel, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
     if (success) {
@@ -24,46 +24,59 @@ void addTipsSwizzMethod(Class class, SEL oriSel, SEL newSel) {
     }
 }
 
-+ (void)load {
-    
+//+ (void)load {
+//
+//    SEL selectors[] = {
+//        @selector(setDelegate:),
+//        @selector(setDataSource:)
+//    };
+//
+//    for (NSUInteger index = 0; index < sizeof(selectors) / sizeof(SEL); ++index) {
+//        SEL originalSelector = selectors[index];
+//        SEL swizzledSelector = NSSelectorFromString([@"llj_" stringByAppendingString:NSStringFromSelector(originalSelector)]);
+//        addTipsSwizzMethod([UITableView class],[UITableView class],originalSelector, swizzledSelector);
+//    }
+//}
+- (void)swizzlMethod:(UIViewController *)viewController {
     SEL selectors[] = {
-        @selector(setDelegate:),
-        @selector(setDataSource:)
+        @selector(tableView:heightForRowAtIndexPath:),
+        @selector(tableView:cellForRowAtIndexPath:)
     };
-    
+
     for (NSUInteger index = 0; index < sizeof(selectors) / sizeof(SEL); ++index) {
         SEL originalSelector = selectors[index];
         SEL swizzledSelector = NSSelectorFromString([@"llj_" stringByAppendingString:NSStringFromSelector(originalSelector)]);
-        addTipsSwizzMethod([UITableView class],originalSelector, swizzledSelector);
+        addTipsSwizzMethod([viewController class],[UITableView class],originalSelector, swizzledSelector);
     }
 }
-- (void)llj_setDelegate:(id<UITableViewDelegate>)delegate {
-    if (delegate) {
-        addTipsSwizzMethod([delegate class],
-                            @selector(tableView:heightForRowAtIndexPath:),
-                            @selector(llj_tableView:heightForRowAtIndexPath:));
-    }
-    [self llj_setDelegate:delegate];
-}
-- (void)llj_setDataSource:(id<UITableViewDataSource>)dataSource {
-    if (dataSource) {
-        addTipsSwizzMethod([dataSource class],
-                    @selector(tableView:cellForRowAtIndexPath:),
-                    @selector(llj_tableView:cellForRowAtIndexPath:));
-    }
-    [self llj_setDataSource:dataSource];
-}
+
+//- (void)llj_setDelegate:(id<UITableViewDelegate>)delegate {
+//    if (delegate) {
+//        addTipsSwizzMethod([delegate class],[self class],
+//                            @selector(tableView:heightForRowAtIndexPath:),
+//                            @selector(llj_tableView:heightForRowAtIndexPath:));
+//    }
+//    [self llj_setDelegate:delegate];
+//}
+//- (void)llj_setDataSource:(id<UITableViewDataSource>)dataSource {
+//    if (dataSource) {
+//        addTipsSwizzMethod([dataSource class],[self class],
+//                    @selector(tableView:cellForRowAtIndexPath:),
+//                    @selector(llj_tableView:cellForRowAtIndexPath:));
+//    }
+//    [self llj_setDataSource:dataSource];
+//}
 
 - (CGFloat)llj_tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [tableView llj_tableView:tableView heightForRowAtIndexPath:indexPath];
-    UITableViewCell *cell = [tableView llj_tableView:tableView cellForRowAtIndexPath:indexPath];
+    [self llj_tableView:tableView heightForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = [self llj_tableView:tableView cellForRowAtIndexPath:indexPath];
     return cell.rowHeight;
 }
 
 - (UITableViewCell *)llj_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView llj_tableView:tableView cellForRowAtIndexPath:indexPath];
-    [tableView addTips:tableView cell:cell indexPath:indexPath];
+    UITableViewCell *cell = [self llj_tableView:tableView cellForRowAtIndexPath:indexPath];
+    [self addTips:tableView cell:cell indexPath:indexPath];
     return cell;
 }
 

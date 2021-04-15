@@ -55,4 +55,8 @@
 "HTTPS双向验证-https://mp.weixin.qq.com/s/UiGEzXoCn3F66NRz_T9crA",
 "TableViewCell.Section切圆角-https://www.jianshu.com/p/739408a7aae1?utm_campaign=hugo",
 "贝塞尔曲线使用-https://www.jianshu.com/p/6c9aa9c5dd68",
-"动画篇-https://www.jianshu.com/p/79a0b3c7086c"]
+"动画篇-https://www.jianshu.com/p/79a0b3c7086c",
+"图片压缩-https://www.jianshu.com/p/e53f2a9b1d48",
+"SwiftUI组件简介-https://gitee.com/TheAlgorithms/SwiftUI?utm_source=alading&utm_campaign=repo#布局",
+"动态库和静态库-https://www.jianshu.com/p/662832e16625",
+"获取ipa-https://www.jianshu.com/p/6d2de917a660?utm_campaign=hugo"]
