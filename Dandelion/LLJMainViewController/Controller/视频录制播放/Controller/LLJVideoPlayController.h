@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LLJVideoPlayController : LLJFViewController
 
 @property (nonatomic, strong) NSArray *imageArray;
-
+@property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic, strong) NSString *urlString;
 
 @end

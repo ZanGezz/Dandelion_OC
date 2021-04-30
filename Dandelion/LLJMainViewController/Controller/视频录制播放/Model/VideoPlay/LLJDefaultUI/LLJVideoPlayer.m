@@ -10,7 +10,6 @@
 
 @interface LLJVideoPlayer ()
 
-@property (nonatomic, strong) LLJVideoPlayModel *model;
 
 @end
 
@@ -20,8 +19,8 @@
     
     //初始化工具类
     LLJWeakSelf(self);
-    self.defaultUI = [[LLJDefaultPlayerUI alloc]initWithSuperView:self model:self.model controlManage:self.controlManage];
-    
+    LLJDefaultPlayerUI *defaultUI = [[LLJDefaultPlayerUI alloc]initWithSuperView:self model:self.model controlManage:self.controlManage];
+    self.defaultUI = defaultUI;
     //标题
     self.defaultUI.title = @"败家讲谈";
     //返回
@@ -31,13 +30,39 @@
     };
     //清晰度
     self.defaultUI.definiteClick = ^(UIButton * _Nonnull sender) {
-        NSLog(@"清晰度");
-
+        NSLog(@"上一集");
+        NSURL *url;
+        for (int i = 0; i < self.model.videoUrlArray.count; i ++) {
+            url = weakSelf.model.videoUrlArray[i];
+            if ([url.absoluteString isEqualToString:weakSelf.model.videoUrl.absoluteString]) {
+                if (i > 0) {
+                    url = weakSelf.model.videoUrlArray[i-1];
+                    [weakSelf nextPlayer:url];
+                    [weakSelf createDefaultPlayerUI];
+                    break;
+                } else {
+                    [MBProgressHUD showMessag:@"第一集了" toView:kRootView hudModel:MBProgressHUDModeText hide:YES];
+                }
+            }
+        }
     };
     //速率
     self.defaultUI.rateClick = ^(UIButton * _Nonnull sender) {
-        NSLog(@"速率");
-
+        NSLog(@"下一集");
+        NSURL *url;
+        for (int i = 0; i < self.model.videoUrlArray.count; i ++) {
+            url = weakSelf.model.videoUrlArray[i];
+            if ([url.absoluteString isEqualToString:weakSelf.model.videoUrl.absoluteString]) {
+                if (weakSelf.model.videoUrlArray.count > i + 1) {
+                    url = weakSelf.model.videoUrlArray[i+1];
+                    [weakSelf nextPlayer:url];
+                    [weakSelf createDefaultPlayerUI];
+                    break;
+                } else {
+                    [MBProgressHUD showMessag:@"最后一集了" toView:kRootView hudModel:MBProgressHUDModeText hide:YES];
+                }
+            }
+        }
     };
     //锁屏
     self.defaultUI.lockClick = ^(UIButton * _Nonnull sender) {
@@ -92,7 +117,14 @@
         }];
     };
     
+    //创建控制回调
+    [self makeControlManage];
+}
+
+//创建控制回调
+- (void)makeControlManage {
     
+    LLJWeakSelf(self);
     //手势事件
     self.gesManage.gesClick = ^(LLJGesClickType type, UIGestureRecognizerState state, CGFloat totalValue, CGFloat unitValue) {
         
@@ -212,8 +244,6 @@
 - (instancetype)initWithFrame:(CGRect)frame playModel:(LLJVideoPlayModel *)model {
     self = [super initWithFrame:frame playModel:model];
     if (self) {
-        
-        self.model = model;
         [self createDefaultPlayerUI];
     }
     return self;

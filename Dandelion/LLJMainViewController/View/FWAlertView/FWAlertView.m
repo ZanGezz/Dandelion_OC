@@ -384,7 +384,7 @@
         _checkPassWord.font = LLJMediumFont;
         _checkPassWord.clearButtonMode = UITextFieldViewModeWhileEditing;
         _checkPassWord.keyboardType = UIKeyboardTypeDefault;
-        _checkPassWord.secureTextEntry = YES;
+        //_checkPassWord.secureTextEntry = YES;
     }
     return _checkPassWord;
 }

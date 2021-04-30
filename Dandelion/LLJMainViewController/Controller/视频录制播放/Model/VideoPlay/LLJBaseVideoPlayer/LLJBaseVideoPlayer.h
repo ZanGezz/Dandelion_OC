@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) LLJViewRotateManage   *rotateManage;
 @property (nonatomic, strong, nullable) LLJPlayManage         *playManage;
 @property (nonatomic, strong, nullable) LLJGesManage          *gesManage;
+@property (nonatomic, strong, nullable) LLJVideoPlayModel     *model;
+
 @property (nonatomic,         readonly) BOOL                   isCurrentFullScreen;
 
 /**
@@ -60,6 +62,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  释放播放工具
  */
 - (void)toolRelease;
+
+/**
+ *  播放下一集
+ */
+- (void)nextPlayer:(NSURL *)url;
 
 @end
 
