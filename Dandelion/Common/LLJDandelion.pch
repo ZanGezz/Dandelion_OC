@@ -32,5 +32,6 @@
 #import "UIView+HiddenFrame.h"
 #import "UITableViewCell+TipsView.h"
 #import "UITableView+AddTipsView.h"
+#import "UINavigationController+Extension.h"
 
 #endif /* LLJDandelion_pch */

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4B02F06A244D5F7C00489CF4 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B02F06C244D5F7C00489CF4 /* Language.strings */; };
+		4B0B37CF2643EC6300D4D1E8 /* JDSnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B37C72643EC6300D4D1E8 /* JDSnowView.m */; };
+		4B0B37D02643EC6300D4D1E8 /* JDFireEmitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B37C82643EC6300D4D1E8 /* JDFireEmitterView.m */; };
+		4B0B37D12643EC6300D4D1E8 /* JDFireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B37CA2643EC6300D4D1E8 /* JDFireworksView.m */; };
+		4B0B37D22643EC6300D4D1E8 /* JDRainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B37CE2643EC6300D4D1E8 /* JDRainView.m */; };
 		4B0CE4752553D461000E90AE /* LLJCenterControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CE4742553D461000E90AE /* LLJCenterControlView.m */; };
 		4B10732125E62B80004B0396 /* LLJBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10731925E62B80004B0396 /* LLJBezierViewController.m */; };
 		4B10732225E62B80004B0396 /* LLJCycleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10731C25E62B80004B0396 /* LLJCycleModel.m */; };
@@ -108,6 +112,7 @@
 		4B72587025E108AA00B4F9AC /* LLJQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72586F25E108AA00B4F9AC /* LLJQRCodeController.m */; };
 		4B72587425E10A2E00B4F9AC /* LLJQRScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72587325E10A2E00B4F9AC /* LLJQRScanController.m */; };
 		4B72587825E10A4200B4F9AC /* LLJQRCreateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72587725E10A4200B4F9AC /* LLJQRCreateController.m */; };
+		4B7BC032265F418A00CA9F17 /* UINavigationController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC031265F418A00CA9F17 /* UINavigationController+Extension.m */; };
 		4B83E1AF25905C8B0041B601 /* git.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B83E1AE25905C8B0041B601 /* git.txt */; };
 		4B83E1DA2595E5E80041B601 /* LLJLunBoTuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E1D92595E5E80041B601 /* LLJLunBoTuController.m */; };
 		4B83E1DD2595E8560041B601 /* IMG_3749.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4B83E1DC2595E8560041B601 /* IMG_3749.JPG */; };
@@ -291,6 +296,14 @@
 		4B02F06B244D5F7C00489CF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Language.strings; sourceTree = "<group>"; };
 		4B02F06D244D603100489CF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4B02F06E244D603100489CF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Language.strings"; sourceTree = "<group>"; };
+		4B0B37C72643EC6300D4D1E8 /* JDSnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSnowView.m; sourceTree = "<group>"; };
+		4B0B37C82643EC6300D4D1E8 /* JDFireEmitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFireEmitterView.m; sourceTree = "<group>"; };
+		4B0B37C92643EC6300D4D1E8 /* JDRainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDRainView.h; sourceTree = "<group>"; };
+		4B0B37CA2643EC6300D4D1E8 /* JDFireworksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFireworksView.m; sourceTree = "<group>"; };
+		4B0B37CB2643EC6300D4D1E8 /* JDFireEmitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFireEmitterView.h; sourceTree = "<group>"; };
+		4B0B37CC2643EC6300D4D1E8 /* JDSnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSnowView.h; sourceTree = "<group>"; };
+		4B0B37CD2643EC6300D4D1E8 /* JDFireworksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFireworksView.h; sourceTree = "<group>"; };
+		4B0B37CE2643EC6300D4D1E8 /* JDRainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDRainView.m; sourceTree = "<group>"; };
 		4B0CE4732553D461000E90AE /* LLJCenterControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJCenterControlView.h; sourceTree = "<group>"; };
 		4B0CE4742553D461000E90AE /* LLJCenterControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJCenterControlView.m; sourceTree = "<group>"; };
 		4B10731925E62B80004B0396 /* LLJBezierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLJBezierViewController.m; sourceTree = "<group>"; };
@@ -487,6 +500,8 @@
 		4B72587325E10A2E00B4F9AC /* LLJQRScanController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJQRScanController.m; sourceTree = "<group>"; };
 		4B72587625E10A4200B4F9AC /* LLJQRCreateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJQRCreateController.h; sourceTree = "<group>"; };
 		4B72587725E10A4200B4F9AC /* LLJQRCreateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJQRCreateController.m; sourceTree = "<group>"; };
+		4B7BC030265F418900CA9F17 /* UINavigationController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extension.h"; sourceTree = "<group>"; };
+		4B7BC031265F418A00CA9F17 /* UINavigationController+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extension.m"; sourceTree = "<group>"; };
 		4B83E1AE25905C8B0041B601 /* git.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = git.txt; sourceTree = "<group>"; };
 		4B83E1D82595E5E80041B601 /* LLJLunBoTuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJLunBoTuController.h; sourceTree = "<group>"; };
 		4B83E1D92595E5E80041B601 /* LLJLunBoTuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJLunBoTuController.m; sourceTree = "<group>"; };
@@ -800,6 +815,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B0B37C62643EC6300D4D1E8 /* EmiterVIew */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B37C72643EC6300D4D1E8 /* JDSnowView.m */,
+				4B0B37C82643EC6300D4D1E8 /* JDFireEmitterView.m */,
+				4B0B37C92643EC6300D4D1E8 /* JDRainView.h */,
+				4B0B37CA2643EC6300D4D1E8 /* JDFireworksView.m */,
+				4B0B37CB2643EC6300D4D1E8 /* JDFireEmitterView.h */,
+				4B0B37CC2643EC6300D4D1E8 /* JDSnowView.h */,
+				4B0B37CD2643EC6300D4D1E8 /* JDFireworksView.h */,
+				4B0B37CE2643EC6300D4D1E8 /* JDRainView.m */,
+			);
+			path = EmiterVIew;
+			sourceTree = "<group>";
+		};
 		4B0CE4762553D521000E90AE /* LLJDefaultUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,6 +1100,8 @@
 				4BD393F322DEFC5F005740F0 /* LLJTabBarController.m */,
 				4B4F7951255BCB1000DE6BF9 /* LLJFViewController.h */,
 				4B4F7950255BCB0F00DE6BF9 /* LLJFViewController.m */,
+				4B7BC030265F418900CA9F17 /* UINavigationController+Extension.h */,
+				4B7BC031265F418A00CA9F17 /* UINavigationController+Extension.m */,
 			);
 			path = "Tabbar和Navi的实现";
 			sourceTree = "<group>";
@@ -1569,6 +1601,7 @@
 		4B72586D25E1087000B4F9AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B0B37C62643EC6300D4D1E8 /* EmiterVIew */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2630,6 +2663,7 @@
 				4B4F79C4255E6C1700DE6BF9 /* NSArray+safe.m in Sources */,
 				4B16FDD6258F812D00B8878E /* LLJUIKitHelper.m in Sources */,
 				4BD394E322DF0181005740F0 /* TOCropScrollView.m in Sources */,
+				4B0B37D02643EC6300D4D1E8 /* JDFireEmitterView.m in Sources */,
 				4BD394DE22DF0181005740F0 /* TOActivityCroppedImageProvider.m in Sources */,
 				4B697F342567BA7C00F43EE1 /* LLJVideoPlayController.m in Sources */,
 				4B4F7A2C255EBEE100DE6BF9 /* TAAbstractDotView.m in Sources */,
@@ -2666,6 +2700,7 @@
 				4BD3953E22DF0181005740F0 /* SRAlbumViewController.m in Sources */,
 				4B4F79B5255E6B1C00DE6BF9 /* FWSelectView.m in Sources */,
 				4B181367237A8477008E9D77 /* UIButton+WSLTitleImage.m in Sources */,
+				4B0B37D22643EC6300D4D1E8 /* JDRainView.m in Sources */,
 				4B12BEF3255125CF001DD245 /* LLJDefaultPlayerUI.m in Sources */,
 				4B4F7997255E649700DE6BF9 /* FWLangageHelper.m in Sources */,
 				4B181361237A7B8E008E9D77 /* LLJCollectionViewController.m in Sources */,
@@ -2673,6 +2708,7 @@
 				4B4F7961255CC77E00DE6BF9 /* LLJBrightView.m in Sources */,
 				4BB90E3324040070004CDDB0 /* LLJRunTimeController.m in Sources */,
 				4B4F7954255BCB1000DE6BF9 /* LLJFTableView.m in Sources */,
+				4B0B37D12643EC6300D4D1E8 /* JDFireworksView.m in Sources */,
 				4B697F2E25678E4E00F43EE1 /* WebViewJavascriptBridge_JS.m in Sources */,
 				4B4F7957255BE8C600DE6BF9 /* LLJGesManage.m in Sources */,
 				4B4F7A0B255E724500DE6BF9 /* FWNoDataView.m in Sources */,
@@ -2724,6 +2760,7 @@
 				4BD393E022DEC5C6005740F0 /* BFBackButton.m in Sources */,
 				4BDACCBF22E059F30011066D /* LLJMainCell.m in Sources */,
 				4BB90E442405283C004CDDB0 /* LLJBlockController.m in Sources */,
+				4B7BC032265F418A00CA9F17 /* UINavigationController+Extension.m in Sources */,
 				4BD3954822DF0181005740F0 /* TransparentView.m in Sources */,
 				4BD394E522DF0181005740F0 /* TOCropView.m in Sources */,
 				4B9258D92539955500F23303 /* LLJRecordModel.m in Sources */,
@@ -2767,6 +2804,7 @@
 				4B4F7A2B255EBEE100DE6BF9 /* TAAnimatedDotView.m in Sources */,
 				4BD394EB22DF0181005740F0 /* PGDatePicker+MinuteAndSecond.m in Sources */,
 				4BD3954922DF0181005740F0 /* ProgressView.m in Sources */,
+				4B0B37CF2643EC6300D4D1E8 /* JDSnowView.m in Sources */,
 				4BD3939E22DEA6CB005740F0 /* AppDelegate.m in Sources */,
 				4B4F7A26255EBEE100DE6BF9 /* SDCycleScrollView.m in Sources */,
 				4BD394E122DF0181005740F0 /* JJImagePicker.m in Sources */,

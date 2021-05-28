@@ -7,6 +7,7 @@
 //
 
 #import "LLJQRCodeController.h"
+#import "JDSnowView.h"
 
 @interface LLJQRCodeController ()
 
@@ -17,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.view.backgroundColor = LLJWhiteColor;
+    JDSnowView *snow = [[JDSnowView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:snow];
 }
 
 @end

@@ -40,6 +40,8 @@
     
     //导航栏代理回调用于隐藏显示导航栏
     self.navigationController.delegate = self;
+    //检查BackToViewController 是否存在并删除
+    [self checkAndClearBackToViewController];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,7 +58,12 @@
     
     self.title = self.titleName;
 }
-
+#pragma mark - 检查BackToViewController 是否存在并删除 -
+- (void)checkAndClearBackToViewController {
+    if ([self.navigationController.backToViewController isEqualToString:NSStringFromClass([self class])]) {
+        self.navigationController.backToViewController = @"";
+    }
+}
 #pragma mark - 统一返回按钮 -
 - (void)createLeftBackBtnWithImageName:(NSString *)imageName backAction:(void (^)(void))backBlock{
     

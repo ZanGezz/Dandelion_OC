@@ -47,12 +47,6 @@
             [videoArray addObject:filePath];
         }
     }
-    [videoArray addObject:@"http://www.7364hu.com"];
-    [videoArray addObject:@"http://www.yeyexiang.cc"];
-    [videoArray addObject:@"https://www.18shuwu.com/book/80100/1462787.html"];
-    [videoArray addObject:@"https://share.jhuche.com/hun_list_vod.html?channel=C21100&proxy=NA2ZGSZT"];
-    [videoArray addObject:@"https://m.youxigt.com/mip/zt/hdnsp"];
-    [videoArray addObject:@"http://www.scmingyu.com"];
     self.dataSource = videoArray;
     self.imageSource = imageArray;
     [self.view addSubview:self.mytableView];
@@ -90,7 +84,7 @@
     
     if (indexPath.row >= self.dataSource.count - 6) {
         LLJBridgeViewController *instance = [[LLJBridgeViewController alloc]init];
-        instance.titleName = @"有色视频";
+        instance.titleName = @"";
         instance.urlString = self.dataSource[indexPath.row];
         [self.navigationController pushViewController:instance animated:YES];
     }else{

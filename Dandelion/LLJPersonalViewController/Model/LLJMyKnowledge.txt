@@ -38,6 +38,7 @@
 "IOS Hook技术-https://www.jianshu.com/p/1ba44f9ea71a",
 "IOS 逆向-https://www.jianshu.com/p/209bd8a771c3",
 "苹果app上架审核规范-https://www.jianshu.com/p/1935521f3b19",
+"苹果app上架审核规范1-https://developer.apple.com/cn/app-store/review/guidelines",
 "iOS 四种ipa包说明-https://www.jianshu.com/p/7efb6f272edd",
 "辨析isKindOfClass、isSubclassOfClass、isMemberOfClass-https://www.jianshu.com/p/820728120938",
 "类中的self和实例对象中的self的差别-https://www.jianshu.com/p/8028ffc06beb?utm_campaign",
