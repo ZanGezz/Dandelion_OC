@@ -11,6 +11,13 @@
 #import "LLJBridgeViewController.h"
 #import "FWGuideView.h"
 #import "LLJMainCell.h"
+#import "FWAlertView.h"
+
+typedef NS_ENUM(NSUInteger, WSelectType) {
+    WSelectTypeDelet,         //删除
+    WSelectTypeEdit,          //编辑
+    WSelectTypeSyn,           //同步
+};
 
 @interface LLJGesAndAuthIDController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -56,7 +63,7 @@
 
 - (void)guideViewShow {
     //页面出现
-    [FWGuideView guideViewShow:self.view action:^{
+    [FWGuideView guideViewShow:kRootView action:^{
         
     }];
 }
@@ -82,6 +89,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+<<<<<<< HEAD
     if (indexPath.row >= self.dataSource.count - 6) {
         LLJBridgeViewController *instance = [[LLJBridgeViewController alloc]init];
         instance.titleName = @"";
@@ -94,32 +102,119 @@
         instance.imageArray = self.imageSource;
         [self.navigationController pushViewController:instance animated:YES];
     }
+=======
+    LLJVideoPlayController *instance = [[LLJVideoPlayController alloc]init];
+    instance.titleName = self.dataSource[indexPath.row];
+    instance.urlString = self.dataSource[indexPath.row];
+    instance.imageArray = self.imageSource;
+    instance.dataArray = self.dataSource;
+    [self.navigationController pushViewController:instance animated:YES];
+>>>>>>> 924529a965b37cbde2996e2564cba2d3b11b6d82
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleDelete;
-}
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return UITableViewCellEditingStyleDelete;
+//}
+//
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//}
+//
+//- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return @"删除";
+//}
+//
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSString *path = self.dataSource[indexPath.row];
+//    [LLJHelper deleteFileByPath:path];
+//    [self.dataSource removeObject:path];
+//    [self.mytableView reloadData];
+//}
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
+- (NSArray *)tableView:(UITableView* )tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //创建左滑action
+    return [self createMyRowAction];
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return @"删除";
+- (NSArray *)createMyRowAction{
+    
+    //在这里根据模型条件选择每行需要的action
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:[self getRowAction:WSelectTypeDelet color:LLJColor(230, 92, 92, 1)]];
+    [array addObject:[self getRowAction:WSelectTypeEdit color:LLJColor(24, 134, 254, 1)]];
+    return array;
 }
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *path = self.dataSource[indexPath.row];
-    [LLJHelper deleteFileByPath:path];
-    [self.dataSource removeObject:path];
-    [self.mytableView reloadData];
+- (UITableViewRowAction *)getRowAction:(WSelectType)type color:(UIColor *)color {
+    
+    LLJWeakSelf(self);
+    NSString *title;
+    if (type == WSelectTypeDelet) {
+        title = @"删除";
+    } else {
+        title = @"编辑";
+    }
+    UITableViewRowAction *rowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:title handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        //按钮事件
+        [weakSelf actionClick:type index:indexPath];
+    }];
+    rowAction.backgroundColor = color;
+    return rowAction;
+}
+- (void)actionClick:(WSelectType)type index:(NSIndexPath *)indexPath{
+    switch (type) {
+        case WSelectTypeDelet:
+        {
+            //删除
+            NSLog(@"点击了删除");
+            NSString *path = self.dataSource[indexPath.row];
+            //[LLJHelper deleteFileByPath:path];
+            [self.dataSource removeObject:path];
+            [self.mytableView reloadData];
+            
+        }
+            break;
+        case WSelectTypeEdit:
+        {
+            //编辑
+            NSLog(@"点击了编辑");
+            NSString *oldPath = self.dataSource[indexPath.row];
+            NSArray *fileName = [self.dataSource[indexPath.row] componentsSeparatedByString:@"/"];
+            [FWAlertView alertViewShowType:FWAlertTypeCheckPw sureButtonName:@"确定" title:@"修改名称" content:@"" canBeRemoved:YES sureAction:^(NSString * _Nonnull str) {
+                NSString *newPath = @"";
+                for (int i = 0; i < fileName.count; i ++) {
+                    NSString *subString = fileName[i];
+                    if (i == fileName.count - 1) {
+                        newPath = [newPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",str]];
+                    } else if (i > 0) {
+                        newPath = [newPath stringByAppendingPathComponent:subString];
+                    } else {
+                        newPath = subString;
+                    }
+                }
+                BOOL isTrue =[[NSFileManager defaultManager] moveItemAtPath:oldPath toPath:newPath error:nil];
+                if (isTrue) {
+                    [MBProgressHUD showMessag:@"修改成功" toView:kRootView hudModel:MBProgressHUDModeText hide:YES];
+                    [self.dataSource replaceObjectAtIndex:indexPath.row withObject:newPath];
+                    [self.mytableView reloadData];
+                    
+                }
+                
+            } cancelAction:^{
+                            
+            }];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
 #pragma mark - 懒加载属性 -
 - (LLJFTableView *)mytableView{
     if (!_mytableView) {
-        _mytableView = [[LLJFTableView alloc]initWithFrame:CGRectMake(0, LLJTopHeight, SCREEN_WIDTH, SCREEN_HEIGHT - LLJTopHeight - LLJTabBarHeight) style:UITableViewStylePlain];
+        _mytableView = [[LLJFTableView alloc]initWithFrame:CGRectMake(0, LLJTopHeight, SCREEN_WIDTH, SCREEN_HEIGHT - LLJTopHeight) style:UITableViewStylePlain];
         _mytableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
         _mytableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _mytableView.delegate = self;

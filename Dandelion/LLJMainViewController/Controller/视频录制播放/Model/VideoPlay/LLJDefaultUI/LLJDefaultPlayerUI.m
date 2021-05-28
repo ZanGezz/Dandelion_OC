@@ -268,7 +268,7 @@
 - (UIButton *)shareButton {
     if (!_shareButton) {
         _shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_shareButton setTitle:@"高清" forState:UIControlStateNormal];
+        [_shareButton setTitle:@"上一集" forState:UIControlStateNormal];
         _shareButton.layer.masksToBounds = YES;
         _shareButton.layer.cornerRadius = 2.0;
         _shareButton.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -284,7 +284,7 @@
 - (UIButton *)moreButton {
     if (!_moreButton) {
         _moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_moreButton setTitle:@"倍速" forState:UIControlStateNormal];
+        [_moreButton setTitle:@"下一集" forState:UIControlStateNormal];
         _moreButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [_moreButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _moreButton.layer.masksToBounds = YES;

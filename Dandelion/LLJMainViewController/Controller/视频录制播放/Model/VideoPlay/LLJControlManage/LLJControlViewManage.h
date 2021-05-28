@@ -40,6 +40,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)rotateScreen:(BOOL)toFull;
 
+/**
+ *  从父视图移除
+ */
+- (void)subViewRemoveFormSuperView;
+
 @end
 
 NS_ASSUME_NONNULL_END

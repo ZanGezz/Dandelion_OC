@@ -12,7 +12,6 @@
 
 @interface LLJBaseVideoPlayer ()
 
-@property (nonatomic, strong) LLJVideoPlayModel *model;
 @property (nonatomic, strong) AVAsset           *asset;
 @property (nonatomic, strong) AVPlayer          *player;
 @property (nonatomic, strong) AVPlayerItem      *item;
@@ -92,6 +91,7 @@
     [self playerRelease];
     [self.playerLayer removeFromSuperlayer];
     self.playerLayer     = nil;
+    [self.controlManage subViewRemoveFormSuperView];
     self.controlManage   = nil;
     self.rotateManage    = nil;
     self.playManage      = nil;
@@ -135,15 +135,28 @@
     [self.layer insertSublayer:self.playerLayer atIndex:0];
     //[self.layer addSublayer:self.playerLayer];
     
-    self.playManage    = [[LLJPlayManage alloc]initWithPlayModel:model player:self.player];
-    self.rotateManage  = [[LLJViewRotateManage alloc]initWithModel:model rotateView:self];
-    self.controlManage = [[LLJControlViewManage alloc]initWithPlayerModel:model];
-    self.gesManage     = [[LLJGesManage alloc]initWithTapView:self.controlManage.centerView model:model];
+    LLJPlayManage *playManage = [[LLJPlayManage alloc]initWithPlayModel:model player:self.player];
+    self.playManage = playManage;
+    
+    LLJViewRotateManage *rotateManage  = [[LLJViewRotateManage alloc]initWithModel:model rotateView:self];
+    self.rotateManage = rotateManage;
+
+    LLJControlViewManage *controlManage = [[LLJControlViewManage alloc]initWithPlayerModel:model];
+    self.controlManage = controlManage;
+
+    LLJGesManage *gesManage     = [[LLJGesManage alloc]initWithTapView:self.controlManage.centerView model:model];
+    self.gesManage = gesManage;
+
 }
 
 - (void)exchangePlayerSourceWithModel:(nonnull LLJVideoPlayModel *)model {
     [self toolRelease];
     [self creatPlayer:model];
+}
+
+- (void)nextPlayer:(NSURL *)url {
+    self.model.videoUrl = url;
+    [self exchangePlayerSourceWithModel:self.model];
 }
 
 #pragma mark - 懒加载 -

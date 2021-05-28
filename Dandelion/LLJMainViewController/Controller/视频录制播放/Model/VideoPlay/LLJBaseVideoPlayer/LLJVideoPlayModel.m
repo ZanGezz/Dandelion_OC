@@ -17,8 +17,8 @@
         self.isAutoPlay  = YES;
         self.isLocalM3U8 = NO;
         self.rotateScreenWhenRotateToFullView = YES;
-        self.isBrightAdjustmentAllowedSmallScreen = NO;
-        self.isVolumeAdjustmentAllowedSmallScreen = NO;
+        self.isBrightAdjustmentAllowedSmallScreen = YES;
+        self.isVolumeAdjustmentAllowedSmallScreen = YES;
         self.isSliderAdjustmentAllowedSmallScreen = YES;
     }
     return self;

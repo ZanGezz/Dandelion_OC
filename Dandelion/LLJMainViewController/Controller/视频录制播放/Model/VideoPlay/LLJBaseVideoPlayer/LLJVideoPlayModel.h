@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LLJVideoPlayModel : NSObject
 
 /**
+ *  播放视频地址集合
+ */
+@property (nonatomic, strong) NSArray *videoUrlArray;
+/**
  *  播放视频地址
  */
 @property (nonatomic, copy, nonnull) NSURL *videoUrl;

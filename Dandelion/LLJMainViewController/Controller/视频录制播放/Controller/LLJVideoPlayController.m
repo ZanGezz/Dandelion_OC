@@ -34,6 +34,11 @@
     [self setUpUI];
 }
 
+- (void)buttonClick:(UIButton *)sender {
+    self.cycleScroll.autoScroll = sender.selected;
+    sender.selected = !sender.selected;
+}
+
 - (void)setUpUI {
 
     //进入页面隐藏状态栏
@@ -64,6 +69,19 @@
     self.cycleScroll.titleLabelBackgroundColor = [UIColor clearColor];
     self.cycleScroll.imageURLStringsGroup = self.imageArray;
     [self.view addSubview:self.cycleScroll];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"暂停轮播" forState:UIControlStateNormal];
+    button.backgroundColor = LLJBlackColor;
+    button.titleLabel.font = LLJFont(16);
+    [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.cycleScroll addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.cycleScroll.mas_right);
+        make.top.mas_equalTo(self.cycleScroll.mas_top);
+        make.width.mas_equalTo(80);
+        make.height.mas_equalTo(40);
+    }];
 }
 #pragma mark - 创建播放工具 -
 - (void)createVideoPlayer {
@@ -90,6 +108,13 @@
     }else{
         playModel.videoUrl = [NSURL URLWithString:@"https://bwol-video-ufile.ebeiwai.com/42091DE374DB6D839C33DC5901307461_360p.m3u8"];
     }
+    
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSString *subString in self.dataArray) {
+        [array addObject:[NSURL fileURLWithPath:subString]];
+    }
+    playModel.videoUrlArray = array;
+    
     return playModel;
 }
 

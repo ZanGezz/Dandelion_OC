@@ -56,6 +56,15 @@
     }
 }
 
+- (void)subViewRemoveFormSuperView {
+    
+    [self.topView removeFromSuperview];
+    [self.leftView removeFromSuperview];
+    [self.rightView removeFromSuperview];
+    [self.bottomView removeFromSuperview];
+    [self.centerView removeFromSuperview];
+}
+
 - (void)controlViewHidden:(BOOL)hidden{
     
     [self.topView viewHidden:hidden];
