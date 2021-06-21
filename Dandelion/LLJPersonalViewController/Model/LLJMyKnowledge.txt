@@ -61,4 +61,5 @@
 "SwiftUI组件简介-https://gitee.com/TheAlgorithms/SwiftUI?utm_source=alading&utm_campaign=repo#布局",
 "动态库和静态库-https://www.jianshu.com/p/662832e16625",
 "获取ipa-https://www.jianshu.com/p/6d2de917a660?utm_campaign=hugo",
-"抓包-https://blog.csdn.net/weixin_42428631/article/details/80642436"]
+"抓包-https://blog.csdn.net/weixin_42428631/article/details/80642436",
+"设备指纹-https://zhuanlan.zhihu.com/p/68852244"]

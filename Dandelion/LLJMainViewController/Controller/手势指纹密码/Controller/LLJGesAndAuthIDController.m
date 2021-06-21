@@ -89,27 +89,13 @@ typedef NS_ENUM(NSUInteger, WSelectType) {
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-<<<<<<< HEAD
-    if (indexPath.row >= self.dataSource.count - 6) {
-        LLJBridgeViewController *instance = [[LLJBridgeViewController alloc]init];
-        instance.titleName = @"";
-        instance.urlString = self.dataSource[indexPath.row];
-        [self.navigationController pushViewController:instance animated:YES];
-    }else{
-        LLJVideoPlayController *instance = [[LLJVideoPlayController alloc]init];
-        instance.titleName = self.dataSource[indexPath.row];
-        instance.urlString = self.dataSource[indexPath.row];
-        instance.imageArray = self.imageSource;
-        [self.navigationController pushViewController:instance animated:YES];
-    }
-=======
+
     LLJVideoPlayController *instance = [[LLJVideoPlayController alloc]init];
     instance.titleName = self.dataSource[indexPath.row];
     instance.urlString = self.dataSource[indexPath.row];
     instance.imageArray = self.imageSource;
     instance.dataArray = self.dataSource;
     [self.navigationController pushViewController:instance animated:YES];
->>>>>>> 924529a965b37cbde2996e2564cba2d3b11b6d82
 }
 
 //- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

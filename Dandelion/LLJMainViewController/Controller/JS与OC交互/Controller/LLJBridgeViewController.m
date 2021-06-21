@@ -51,7 +51,7 @@
     self.finishLoad = NO;
     NSURL *url;
     if (self.urlString.length == 0) {
-        self.urlString = [[NSBundle mainBundle]pathForResource:@"WKWebViewText.html" ofType:@""];
+        self.urlString = [[NSBundle mainBundle]pathForResource:@"text.html" ofType:@""];
     }
     if ([self.urlString hasPrefix:@"http"]) {
         url = [NSURL URLWithString:self.urlString];

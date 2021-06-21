@@ -9,7 +9,9 @@
 #import "LLJWKWebViewController.h"
 #import "LLJTabBarController.h"
 
-@interface LLJWKWebViewController ()
+@interface LLJWKWebViewController ()<WKScriptMessageHandler,WKNavigationDelegate,WKUIDelegate>
+
+@property (nonatomic, strong) WKWebView *webView;
 
 @end
 
@@ -20,11 +22,17 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.backgroundColor = [UIColor redColor];
-    button.frame = CGRectMake(100, 200, 100, 40);
-    [button addTarget:self action:@selector(tap) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button.backgroundColor = [UIColor redColor];
+//    button.frame = CGRectMake(100, 200, 100, 40);
+//    [button addTarget:self action:@selector(tap) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
+    
+    [self.view addSubview:self.webView];
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"text.html" ofType:@""]];
+
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:req];
 }
 
 - (void)tap {
@@ -33,6 +41,37 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 //    LLJTabBarController *tabbar = (LLJTabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
 //    tabbar.selectedIndex = 1;
+}
+
+- (WKWebView *)webView{
+    if (!_webView) {
+        //初始化webview
+        _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, SCREEN_HEIGHT - LLJTabBarHeight)];
+        if (@available(iOS 11.0,*)) {
+          _webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+          self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        _webView.navigationDelegate = self;
+        _webView.UIDelegate = self;
+        _webView.scrollView.bounces = NO;
+        _webView.scrollView.showsVerticalScrollIndicator = NO;
+        _webView.scrollView.showsHorizontalScrollIndicator = NO;
+    }
+    return _webView;
+}
+
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message
+                                                                             message:nil
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:^(UIAlertAction *action) {
+                                                          completionHandler();
+                                                      }]];
+    [self presentViewController:alertController animated:YES completion:^{}];
 }
 
 @end

@@ -9,6 +9,9 @@
 
 #import "AppDelegate.h"
 #import "LLJTabBarController.h"
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+#import <AdSupport/AdSupport.h>
+
 
 @interface AppDelegate ()
 
@@ -21,6 +24,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *idfaStr;
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+
+            NSLog(@"%@",[[ASIdentifierManager sharedManager] advertisingIdentifier]);
+
+        }];
+    }else{
+        idfaStr = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    }
+    NSLog(@"%@",[[ASIdentifierManager sharedManager] advertisingIdentifier]);
+
     
     //初始化单例
     [LLJCoreDataHelper helper];

@@ -117,6 +117,7 @@
 		4B83E1DA2595E5E80041B601 /* LLJLunBoTuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E1D92595E5E80041B601 /* LLJLunBoTuController.m */; };
 		4B83E1DD2595E8560041B601 /* IMG_3749.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4B83E1DC2595E8560041B601 /* IMG_3749.JPG */; };
 		4B83E1EE2599B4DF0041B601 /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B83E1ED2599B4DE0041B601 /* UITableViewCell+Extension.m */; };
+		4B84634C26687544002A8B2B /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = 4B84634B26687544002A8B2B /* text.html */; };
 		4B88777C25E7A925005A63C0 /* LLJFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B88777B25E7A925005A63C0 /* LLJFirstLetter.m */; };
 		4B8CDAC7235E8DD400569790 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8CDAC6235E8DD400569790 /* CoreData.framework */; };
 		4B9258C42533F62100F23303 /* LLJTextFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9258C32533F62100F23303 /* LLJTextFieldController.m */; };
@@ -509,6 +510,7 @@
 		4B83E1E02595E8DB0041B601 /* Dandelion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dandelion.entitlements; sourceTree = "<group>"; };
 		4B83E1EC2599B4DE0041B601 /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		4B83E1ED2599B4DE0041B601 /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
+		4B84634B26687544002A8B2B /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
 		4B88777A25E7A925005A63C0 /* LLJFirstLetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLJFirstLetter.h; sourceTree = "<group>"; };
 		4B88777B25E7A925005A63C0 /* LLJFirstLetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLJFirstLetter.m; sourceTree = "<group>"; };
 		4B8CDAC6235E8DD400569790 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -1541,6 +1543,7 @@
 		4B628BBF242CE08B003D3204 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B84634B26687544002A8B2B /* text.html */,
 				4B628BC5242CE0F0003D3204 /* WKWebViewText.html */,
 			);
 			path = Model;
@@ -2556,6 +2559,7 @@
 				4BD3955222DF0181005740F0 /* SRCamera_icon@2x.png in Resources */,
 				4BD3951122DF0181005740F0 /* BadgeTimelapseSmall.png in Resources */,
 				4BD3952022DF0181005740F0 /* SRAlbum_Photo@3x.png in Resources */,
+				4B84634C26687544002A8B2B /* text.html in Resources */,
 				4BD3955522DF0181005740F0 /* SR_touch_focus_not@2x.png in Resources */,
 				4BD3952D22DF0181005740F0 /* SR_WhiteBack@2x.png in Resources */,
 				4BD3955322DF0181005740F0 /* SR_Camera_WhiteBack@3x.png in Resources */,
@@ -3016,7 +3020,7 @@
 				CODE_SIGN_ENTITLEMENTS = Dandelion/Dandelion.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X44CE4T999;
+				DEVELOPMENT_TEAM = 474CB9MP8W;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dandelion/Common/LLJDandelion.pch";
 				INFOPLIST_FILE = Dandelion/Info.plist;
@@ -3029,7 +3033,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dandelion/UTils/BWPAlbum/SRAlbumClass/SRModel/lame",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-197692674-qq.com";
+				PRODUCT_BUNDLE_IDENTIFIER = "dan-oc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3043,7 +3047,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Dandelion/Dandelion.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X44CE4T999;
+				DEVELOPMENT_TEAM = 474CB9MP8W;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dandelion/Common/LLJDandelion.pch";
 				INFOPLIST_FILE = Dandelion/Info.plist;
@@ -3056,7 +3060,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dandelion/UTils/BWPAlbum/SRAlbumClass/SRModel/lame",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-197692674-qq.com";
+				PRODUCT_BUNDLE_IDENTIFIER = "dan-oc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

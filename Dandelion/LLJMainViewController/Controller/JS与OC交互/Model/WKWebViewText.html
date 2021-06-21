@@ -28,7 +28,8 @@
     <div>
       <div><input type="button" value="Prompt 提示框" onclick="callJsInput()"></div><br/>
 
-      <div><a href="">点我跳转</a></div>
+<!--      <div><a href="">点我跳转</a></div>-->
+      
       <div><button style="width: 200px;height: 30px;font-size: 20px;" onclick="openApp()">点我跳转</button></div>
     </div>
     
@@ -40,10 +41,36 @@
     <script type="text/javascript">
         
         
-        //跳转app
-        function openApp(){
-            window.location.href="";
+    //跳转app
+    function openApp(){
+        
+        //window.location.href="";
+        alert("版本号")
+        //checkAPPVersion("3.20.11","3.20.10")
+    }
+    
+    ///以下是iOS7版本利用setupWebViewJavascriptBridge桥接和UIWebView交互
+    ///在html脚本里面必须加上这快代码进行桥接
+    function checkAPPVersion(newVersion, oldVersion) {
+        
+        var _a = toNum(a),_b = toNum(b);
+        if(_a==_b) Alert("版本号相同！版本号为："+a);
+        if(_a>_b)  alert("版本号"+a+"是新版本！");
+        if(_a<_b)  alert("版本号"+b+"是新版本！");
+    }
+    
+    function toNum(a){
+        var a=a.toString();
+        //也可以这样写 var c=a.split(/\./);
+        var c=a.split('.');
+        var num_place=["","0","00","000","0000"],r=num_place.reverse();
+        for (var i=0;i<c.length;i++){
+            var len=c[i].length;
+            c[i]=r[len]+c[i];
         }
+        var res= c.join('');
+        return res;
+     }
     
         ///以下是iOS7版本利用setupWebViewJavascriptBridge桥接和UIWebView交互
         ///在html脚本里面必须加上这快代码进行桥接
@@ -102,6 +129,8 @@
 
     }
     function callJsConfirm() {
+        alert('aaa')
+
       if (confirm('Confirm', 'Please show confirm')) {
         document.getElementById('jsParamFuncSpan').innerHTML
         = 'true';
