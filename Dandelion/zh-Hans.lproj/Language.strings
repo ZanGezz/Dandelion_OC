@@ -1,0 +1,396 @@
+/* 
+  Language.strings
+  Dandelion
+
+  Created by 刘帅 on 2020/4/20.
+  Copyright © 2020 liushuai. All rights reserved.
+*/
+"shu"="刘帅";
+"peng"="朋友圈";
+
+
+/**
+ *  中文
+ *  登录
+ */
+//用户名输入为空提示
+"Key_userName_empty" = "请输入手机号/邮箱";
+//用户名输入错误提示
+"Key_userName_wrong" = "用户名或密码错误，请重新输入";
+//密码不能为空提示
+"Key_pw_empty" = "请输入密码";
+//密码输入规则错误提示
+"Key_pw_Alert" = "请输入8-20位密码，且必须包含字母和数字";
+//输入手机号holder
+"Key_userName_placeHolder" = "请输入手机号/邮箱";
+//输入手机号holder
+"Key_mobile_title" = "手机号/邮箱";
+//输入密码holder
+"Key_pw_placeHolder" = "请输入密码";
+//验证码
+"Key_VerificationCode_title" = "     ";
+//输入图片验证码holder
+"Key_imageNum_placeHolder" = " ";
+//输入手机号holder
+"Key_telNum_placeHolder" = " ";
+//获取短信验证码
+"Key_getTelNum_name" = "获取验证码";
+//文字同意
+"Key_agree_title" = "同意";
+//文字和
+"Key_and_title" = "和";
+//文案使用条款
+"Key_service_title" = "使用条款";
+//文案隐私政策
+"Key_Privacy_title" = "隐私政策";
+//登录文案
+"Key_login_title" = "登录";
+//去忘记密码文案
+"Key_forgetPw_title?" = "忘记密码?";
+//去注册文案
+"Key_register_title?" = "新用户？去注册";
+//阅读条款提示
+"Key_serviceAgree_alert" = "请阅读并同意使用条款和隐私政策";
+//忘记密码文案
+"Key_forgetPw_title" = "忘记密码";
+//注册文案
+"Key_register_title" = "注册";
+//去登录文案
+"Key_goLogin_btn" = "返回登录";
+//验证密码失败文案
+"Key_checkPwFail_alert" = "密码错误，请重新输入";
+//图片验证码不能为空
+"Key_imageNum_empty" = "请输入正确的图形验证码";
+//短信验证码不能为空
+"Key_telNum_empty" = "请输入正确的动态验证码";
+//自定义业绩指标
+"Key_defineIndic_title" = "自定义业绩指标";
+
+
+
+
+/**
+ *  中文
+ *  选择身份
+ */
+//个人客户文案
+"Key_personal_title" = "个人客户";
+//机构客户文案
+"Key_organi_title" = "机构客户";
+//合作伙伴文案
+"Key_partner_title" = "合作伙伴";
+//请选择身份类型文案
+"Key_selectIDType_title" = "请选择身份类型";
+//选择身份类型文案
+"Key_selectIDType_btn" = "切换身份";
+
+
+
+
+/**
+ *  中文
+ *  我的页面
+ */
+//资产账户文案
+"Key_account_title" = "资产账户";
+//当前身份文案
+"Key_currentId_title" = "当前身份";
+//语言文案
+"Key_language_title" = "语言";
+//字体大小文案
+"Key_font_title" = "字体大小";
+//清除缓存文案
+"Key_cleanCache_title" = "清除缓存";
+//通知管理文案
+"Key_notifacation_title" = "通知管理";
+//互动问答文案
+"Key_qa_title" = "互动问答";
+//关于文案
+"Key_about_title" = "关于APP";
+//隐私文案
+"Key_private_title" = "隐私";
+//安全设置文案
+"Key_saveSet_title" = "安全设置";
+//安全退出文案
+"Key_logout_title" = "安全退出";
+//中文文案
+"zh-Hans" = "中文";
+//英文文案
+"en" = "英文";
+//小号文案
+"key_small_title" = "小号";
+//中号文案
+"Key_center_title" = "中号";
+//标准文案
+"Key_standerd_title" = "标准";
+//大号文案
+"Key_large_title" = "大号";
+
+
+
+
+/**
+ *  中文
+ *  搜索
+ */
+//搜索输入文案
+"Key_search_placeHolder" = "搜索";
+//历史搜索文案
+"Key_search_history" = "历史搜索";
+//详情文案
+"Key_details_title" = "详情";
+
+
+
+/**
+ *  中文
+ *  安全设置
+ */
+//登录密码文案
+"Key_logPw_title" = "登录密码";
+//指纹文案
+"Key_fingerId_title" = "指纹";
+//面容ID文案
+"Key_faceID_title" = "面容ID";
+//手势登录文案
+"Key_ges_title" = "手势登录";
+//登录设备管理文案
+"Key_deviceManager_title" = "登录设备管理";
+//注销用户文案
+"Key_logOff_title" = "注销用户";
+//已启用文案
+"Key_using_title" = "已启用";
+//未启用文案
+"Key_unusing_title" = "未启用";
+
+
+
+
+
+/**
+ *  中文
+ *  关于app
+ */
+//当前版本文案
+"Key_currentVersion_title" = "当前版本";
+//版本更新文案
+"Key_versionUpdate_title" = "版本更新";
+//淡水泉APP文案
+"Key_CSP_title" = "淡水泉投资";
+//设备信息文案
+"Key_deviceInfo_title" = "设备信息";
+
+
+/**
+ *  中文
+ *  通知管理
+ */
+//短信通知文案
+"Key_duanxin_title" = "短信通知";
+//微信通知文案
+"Key_weixin_title" = "微信通知";
+//邮箱通知文案
+"Key_email_title" = "邮箱通知";
+//国内客户（个人）文案
+"Key_guonei_title" = "国内客户（个人）";
+//国外客户（个人）文案
+"Key_guowai_title" = "国外客户（个人）";
+
+
+
+
+/**
+ *  中文
+ *  弹框提示
+ */
+//确定文案
+"Key_sure_title" = "确定";
+//取消文案
+"Key_cancel_title" = "取消";
+//确定清除本地缓存？文案
+"Key_cacheinfo_alert" = "确定清除本地缓存？";
+//注销用户提示
+"Key_logOffInfo_alert" = "尊敬的客户，您本次操作为注销用户。注销后，您的登录用户信息将被删除，且无法恢复。如您确认本次操作，请点击确定，谢谢！";
+//重新登录文案
+"Key_reLogin_title" = "重新登录";
+//关闭文案
+"Key_close_title" = "关闭";
+//申请中提示
+"Key_sheHe_Alert" = "尊敬的客户，您的账户绑定申请正在审核中，我们将联系您的认/申购渠道核实相关信息，并在5个工作日内以短信的方式通知您。如有任何疑问，请致电客服电话400818776";
+//密码验证文案
+"Key_checkPw_title" = "密码验证";
+//密码验证文案
+"Key_checkPw_button" = "密码验证";
+//请输入您的密码文案
+"Key_pwInput_title" = "请输入您的登录密码";
+//请详细描述注销原因，以便我们更好的服务～
+"Key_logOffInfo_placeHolder" = "请详细描述注销原因，以便我们更好的服务～";
+//温馨提示
+//"Key_alert_title" = "温馨提示";
+//导引图文案
+"Key_guide_alert" = "查看本模块内容需要再次进行身份验证，请选择验证方式";
+//导引图去开启文案
+"Key_kaiqi_alert" = "开启手势密码/生物识别验证";
+//发送邮件文案
+"Key_sendEmail_title" = "发送邮件";
+//验证邮件已发送至您的XXX邮箱，请前往验证，谢谢！文案
+"Key_sendEmail_alert" = "验证邮件已发送至您的%@邮箱，请前往验证，谢谢！";
+//请求失败
+"Key_fail_alert" = "请求失败";
+//新密码不能为空
+"Key_newPw_empty" = "请输入您的新密码";
+//两次输入密码不一致
+"Key_pw_difference" = "两次输入的密码不一致";
+//确定解除绑定吗？
+"Key_unbind_alert" = "请您确认解除绑定";
+//发送验证邮件
+"Key_sendEmaill_button" = "确认";
+//您的账户绑定已过期，我们已向您的XXX邮箱发送验证邮件，请查收！
+"Key_emailCheckInfo_alert" = "尊敬的用户，您的账户绑定已过期，请点击“确认”按钮并前往您的预留邮箱进行身份验证";
+//请确认是否退出当前登录账号？
+"Key_logOut_alert" = "请确认是否退出当前登录账号？";
+
+
+/**
+ *  中文
+ *  基本信息
+ */
+//基本信息文案
+"Key_userInfo_title" = "基本信息";
+//姓名文案
+"Key_userName_title" = "姓名";
+//手机号文案
+"Key_userTel_title" = "手机号";
+//邮箱文案
+"Key_userEmail_title" = "邮箱";
+
+
+
+/**
+ *  中文
+ *  手势密码
+ */
+//手势密码文案
+"Key_gesPw_title" = "手势密码";
+//请绘制手势密码文案
+"Key_gesDraw_title" = "请绘制手势密码";
+//请再次确认手势密码文案
+"Key_gesReconfirm_title" = "请再次确认手势密码";
+//与上次绘制不一致，请重新绘制文案
+"Key_gesReDraw_title" = "与上次绘制不一致，请重新绘制";
+//手势密码 至少连接4个点文案
+"Key_gesLeastPoint_title" = "请至少连接4个点";
+//或文案
+"Key_or_title" = "或";
+//重新设置文案
+"Key_gesReset_title" = "重新设置";
+//使用手势密码登录文案
+"Key_userGes_title" = "使用手势密码登录";
+//修改手势密码文案
+"Key_changeGes_title" = "修改手势密码";
+//输入手势密码解锁文案
+"Key_gesUnlocked_alert" = "请绘制解锁图案";
+//手势密码输入错误次数
+"Key_gesInputWrongTimes_alert" = "密码错误，请重新输入";
+
+
+
+/**
+ *  中文
+ *  修改成功
+ */
+
+//手势密码设置成功文案
+"Key_gesCollectSucess_alert" = "手势密码设置成功";
+//重置密码文案
+"Key_pwReset_title" = "重置密码";
+//重置成功文案
+"Key_pwResetSucess_alert" = "重置成功";
+//修改手机号文案
+"Key_telReset_title" = "修改手机号";
+//修改邮箱文案
+"Key_emailReset_title" = "修改邮箱";
+//修改成功文案
+"Key_telResetSucess_alert" = "修改成功";
+//完成文案
+"Key_complete_tilte" = "完成";
+
+
+
+/**
+ *  中文
+ *  修改信息
+ */
+//修改姓名文案
+"Key_changeName_title" = "修改姓名";
+//请输入姓名文案
+"Key_enterName_title" = "请输入姓名";
+//下一步文案
+"Key_nextStep_title" = "下一步";
+//请输入新密码文案
+"Key_newPassWord_placeHolder" = "请输入您的新密码";
+//请再次确认密码文案
+"Key_surePassWord_placeHolder" = "请再次确认密码";
+//请输入新手机号文案
+"Key_newTel_placeHolder" = "请输入新手机号";
+//请输入新邮箱文案
+"Key_newEmail_placeHolder" = "请输入新邮箱";
+
+/**
+ *  中文
+ *  审核中
+ */
+//产品名称文案
+"Key_productName_title" = "产品名称：";
+//购买渠道文案
+"Key_purchaseChannel_title" = "购买渠道：";
+//其他文案
+"Key_otherMsg_title" = "其他：";
+
+
+
+/**
+ *  中文
+ *  无数据图提示
+ */
+//暂无数据~文案
+"Key_noData_alert" = "暂无内容";
+//加载失败~文案
+"Key_loadFaill_alert" = "加载失败";
+//重新加载文案
+"Key_reload_title" = "重新加载";
+//暂无网络~文案
+"Key_noNetwork_alert" = "暂无网络";
+//暂无互动问答文案
+"Key_noQa_alert" = "暂无互动问答";
+
+
+
+
+/**
+ *  中文
+ *  设备管理
+ */
+//允许多个设备登录文案
+"Key_multiLogin_title" = "允许多个设备登录";
+//允许绑定多个微信文案
+"Key_bindMultiWechat_title" = "允许多个微信绑定";
+//APP登录设备文案
+"Key_appDevice_title" = "已登录APP的设备";
+//已绑定微信文案
+"Key_wechatDevice_title" = "已绑定的微信号";
+//解绑文案
+"Key_unbind_title" = "解绑";
+
+
+
+//当前网路不可用提示文案
+"Key_netUnavailable_alert" = "当前网络不可用，请检查后再试";
+
+
+/**
+ *  中文
+ *  版本更新
+ */
+"Key_appUpdate_title" = "版本更新";
+"Key_appUpdate_Content" = "已有新版本等待您更新，请前往应用商店进行下载和安装。";

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BPAudioRecorderViewController">
+            <connections>
+                <outlet property="audioPlayButton" destination="F4u-u7-oVv" id="YZm-eC-6ek"/>
+                <outlet property="bgImageView" destination="q83-H0-um0" id="OGG-Hl-mLo"/>
+                <outlet property="disMissButton" destination="v5c-ap-3SE" id="ZER-u8-jUH"/>
+                <outlet property="gifImageView" destination="1m2-iC-Vq9" id="rQZ-48-bZi"/>
+                <outlet property="nextStepButton" destination="NuO-Sg-Jdc" id="WF0-4i-VCj"/>
+                <outlet property="preRecordImage" destination="zMF-Jv-yHd" id="4eT-Js-cNn"/>
+                <outlet property="recordLabel" destination="XHx-R1-Q9K" id="k59-pp-K65"/>
+                <outlet property="startRecordButton" destination="G8R-uE-ztK" id="6mi-hF-IZF"/>
+                <outlet property="timeLabel" destination="sF3-MV-vTi" id="znH-2x-BLl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luyin_bg" translatesAutoresizingMaskIntoConstraints="NO" id="q83-H0-um0">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF3-MV-vTi">
+                    <rect key="frame" x="166" y="58" width="44" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="luyin_01" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-Jv-yHd">
+                    <rect key="frame" x="67" y="248" width="240" height="6"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8R-uE-ztK">
+                    <rect key="frame" x="154" y="540" width="67" height="67"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="video_pai01"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="s5n-qg-Urk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="10003" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5c-ap-3SE">
+                    <rect key="frame" x="51" y="557" width="20" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="SR_Camera_WhiteBack.png"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="auT-Q5-gYB"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1m2-iC-Vq9">
+                    <rect key="frame" x="67" y="262" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" tag="10004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4u-u7-oVv">
+                    <rect key="frame" x="168" y="400" width="39" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="luyin_play"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="Ste-ux-zBZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="10002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuO-Sg-Jdc">
+                    <rect key="frame" x="264" y="542" width="60" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="video_next"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="IcP-sZ-1nL"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击按钮进行录音" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHx-R1-Q9K">
+                    <rect key="frame" x="123" y="490" width="123" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="q83-H0-um0" secondAttribute="bottom" id="3zq-bw-k1y"/>
+                <constraint firstItem="q83-H0-um0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AKN-LA-8kO"/>
+                <constraint firstItem="q83-H0-um0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Bbt-PZ-Cv6"/>
+                <constraint firstAttribute="trailing" secondItem="q83-H0-um0" secondAttribute="trailing" id="s3t-Ub-HxW"/>
+            </constraints>
+            <point key="canvasLocation" x="-74.400000000000006" y="57.121439280359823"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SR_Camera_WhiteBack.png" width="20" height="11"/>
+        <image name="luyin_01" width="222.5" height="3"/>
+        <image name="luyin_bg" width="375" height="667"/>
+        <image name="luyin_play" width="39" height="43"/>
+        <image name="video_next" width="60" height="60"/>
+        <image name="video_pai01" width="67" height="67"/>
+    </resources>
+</document>

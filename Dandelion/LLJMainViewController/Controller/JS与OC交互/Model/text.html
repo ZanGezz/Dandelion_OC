@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><a href="https://apps.apple.com/cn/app">点我跳转</a></div>
+    <input id="btn1" style="width: 200px;height: 30px;font-size: 20px;" type="button" onclick="clickName()" name="点击弹框" />
+    
+</body>
+<script>
+    function clickName(){
+        window.location = "https://itunes.apple.com/us/app";
+        //@"itms-apps://itunes.apple.com/app/id1291240252"
+        //check_version("3.20.09","3.20.10")
+    }
+    
+    function check_version(newVersion,oldVersion){
+        
+        var new_version = newVersion.split('.')
+        var old_version = oldVersion.split('.')
+        for (var i = 0; i < old_version.length; i++) {
+            var old_num = old_version[i];
+            var new_num = '0';
+            if (i < new_version.length) {
+                new_num = new_version[i];
+            }
+            if (parseInt(new_num) < parseInt(old_num)) {
+                alert("false")
+                return false
+            } else if(parseInt(new_num) > parseInt(old_num)) {
+                alert("true1")
+                return true
+            }
+         }
+        alert("true2")
+         return true
+     }
+
+</script>
+</html>

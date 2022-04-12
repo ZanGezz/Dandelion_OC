@@ -1,0 +1,1 @@
+../../../SDWebImage/SDWebImage/Private/SDImageAssetManager 2.h

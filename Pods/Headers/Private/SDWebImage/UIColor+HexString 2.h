@@ -1,0 +1,1 @@
+../../../SDWebImage/SDWebImage/Private/UIColor+HexString 2.h

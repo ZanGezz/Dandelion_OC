@@ -1,0 +1,1 @@
+../../../SDWebImage/SDWebImage/Private/SDImageAPNGCoderInternal 2.h

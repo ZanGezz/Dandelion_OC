@@ -1,0 +1,1 @@
+../../../SDWebImage/SDWebImage/Private/SDImageGIFCoderInternal 2.h

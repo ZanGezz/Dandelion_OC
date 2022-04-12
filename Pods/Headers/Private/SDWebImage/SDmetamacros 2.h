@@ -1,0 +1,1 @@
+../../../SDWebImage/SDWebImage/Private/SDmetamacros 2.h
